@@ -120,11 +120,14 @@
     </section>
 
      <!-- Menu section  -->
+
      <section class="menu" id="menu">
         <main>
         <div class="main-text"> 
             <h2>Menu <span>Items</span></h2>
         </div>
+        
+        
         <div class="menu-cards">
             <!-- Use server-side scripting (e.g., PHP) to fetch and display menu items here -->
             <!--  Example using PHP: -->
@@ -147,9 +150,14 @@
             ?>
             <!-- -->
         </div>
+        </div>
     </main>
-    </section>
+
+    </section> 
+    
+    <!-- end section -->
     <!-- Contact section  -->
+    
     <section class="contact" id="contact">
         <div class="contact-text">
             <h2>Contact <span>Us!</span></h2>
@@ -190,6 +198,7 @@
 
         </div>
     </section>
+   
     <!-- end section -->
     <section class="end">
         <div class="last-text">
