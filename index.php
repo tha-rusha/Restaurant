@@ -99,6 +99,7 @@
                             echo '<h3>' . $row['itemName'] . '</h3>';
                             echo '<p>' . $row['description'] . '</p>';
                             echo '<p>Price: $' . $row['price'] . '</p>';
+                            echo '<a href=#" class="order-button">Order Now</a>';
                             echo '</div>';
                         
                         }
@@ -144,7 +145,10 @@
                     echo '<h3>' . $row['itemName'] . '</h3>';
                     echo '<p>' . $row['description'] . '</p>';
                     echo '<p>Price: $' . $row['price'] . '</p>';
+                    // Add the "Order Now" button with a link
+                    echo '<a href=#" class="order-button">Order Now</a>';
                     echo '</div>';
+                    
                   
                 }
             ?>
