@@ -38,7 +38,7 @@
   <div class="dropdown-content">
     <a href="#">Profile</a>
     <a href="#">Register</a>
-    <a href="#">Login</a>
+    <a href="pages/login.html">Login</a>
   </div>
 </div>
             <li><a href="#contact">Contact</a></li>
