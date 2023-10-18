@@ -30,6 +30,7 @@
     <img src="images/logo1.png" width="200" height="200" >
     
         <ul class="navlist">
+        <li><a href="pages/dashboard.php" class="active">admin</a></li>
             <li><a href="#home" class="active">Home</a></li>
             <li><a href="#menu">Menu </a></li>
             <li><a href="#services">Promotion & Discount</a></li>
