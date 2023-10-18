@@ -47,7 +47,7 @@
 </div>
             <li><a href="#contact">Contact</a></li>
             
-            <li><a href="cart.php"><i style="font-size:24px" class="fa">&#xf07a;</i></a></li>
+            <li><a href="pages/cart.php"><i style="font-size:24px" class="fa">&#xf07a;</i></a></li>
 
         </ul>
 
