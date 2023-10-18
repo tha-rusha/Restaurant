@@ -37,8 +37,8 @@
   <button class="dropbtn">Profile</button>
   <div class="dropdown-content">
     <a href="#">Profile</a>
-    <a href="#">Register</a>
-    <a href="#">Login</a>
+    <a href="pages/register.php">Register</a>
+    <a href="pages/login.php">Login</a>
   </div>
 </div>
             <li><a href="#contact">Contact</a></li>
@@ -99,6 +99,7 @@
                             echo '<h3>' . $row['itemName'] . '</h3>';
                             echo '<p>' . $row['description'] . '</p>';
                             echo '<p>Price: $' . $row['price'] . '</p>';
+                            echo '<a href=#" class="order-button">Order Now</a>';
                             echo '</div>';
                         
                         }
@@ -144,7 +145,10 @@
                     echo '<h3>' . $row['itemName'] . '</h3>';
                     echo '<p>' . $row['description'] . '</p>';
                     echo '<p>Price: $' . $row['price'] . '</p>';
+                    // Add the "Order Now" button with a link
+                    echo '<a href=#" class="order-button">Order Now</a>';
                     echo '</div>';
+                    
                   
                 }
             ?>
@@ -202,11 +206,9 @@
     <!-- end section -->
     <section class="end">
         <div class="last-text">
-            <p> © COPYRIGHT 2023 | KING MEAL FAMILY RESTUARANT | ALL RIGHTS RESERVED.</p>
+        <p style="text-align: center;"> © COPYRIGHT 2023 | KING MEAL FAMILY RESTUARANT | ALL RIGHTS RESERVED.</p>
         </div>
-        <div class="top">
-            <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
-        </div>
+        
 
     </section>
       
