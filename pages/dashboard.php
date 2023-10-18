@@ -19,7 +19,7 @@
         <img src="../images/kingmeal.png" alt="Your Logo">
         <h1>King Meal<br>Family Restuarant</h1>
     </div>
-    <a href="#">Home</a>
+    <a href="../index.php">Home</a>
     <a href="#">Menu</a>
     <a href="#">Contact</a>
     <a href="#">Login</a>
