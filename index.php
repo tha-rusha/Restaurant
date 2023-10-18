@@ -27,7 +27,7 @@
 
     <!-- header section -->
     <header>
-    <img src="images/logo1.png" width="200" height="200" >
+    <img src="images/kingmeal.png" width="140" height="100" >
     
         <ul class="navlist">
             <li><a href="#home" class="active">Home</a></li>
