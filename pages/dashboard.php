@@ -3,6 +3,7 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="../css/dashboard.css">
+    <script src="../js/dashboard.js"></script>
 </head>
 <body>
 
@@ -15,13 +16,16 @@
 
 <div class="sidenav">
     <div class="logo">
-        <img src="images/logod.png" alt="Your Logo">
-        <h1>Your Restaurant Name</h1>
+        <img src="../images/kingmeal.png" alt="Your Logo">
+        <h1>King Meal<br>Family Restuarant</h1>
     </div>
+    <a href="#">Home</a>
+    <a href="#">Menu</a>
+    <a href="#">Contact</a>
+    <a href="#">Login</a>
+    <a href="#">Register</a>
+    <a href="#">Profile</a>
     <a href="#">Dashboard</a>
-    <a href="#">Cashier</a>
-    <a href="#">Kitchen</a>
-    <a href="#">Sign Up</a>
 </div>
 
 <div class="main">
@@ -30,10 +34,10 @@
         <div class="card">
             <div class="card-header">
                 <img src="icon.png" alt="Card Icon">
-                <h2>Card Title</h2>
+                <h2>Top Customer.</h2>
             </div>
             <div class="card-content">
-                <p>This is the content of the card.</p>
+                <p>Top Customer.</p>
             </div>
             <div class="card-footer">
                 <p>Card Footer</p>
@@ -44,7 +48,7 @@
         <div class="card">
             <div class="card-header">
                 <img src="icon.png" alt="Card Icon">
-                <h2>Card Title</h2>
+                <h2>Top Menu Items.</h2>
             </div>
             <div class="card-content">
                 <p>This is the content of the card.</p>
@@ -58,7 +62,7 @@
         <div class="card">
             <div class="card-header">
                 <img src="icon.png" alt="Card Icon">
-                <h2>Card Title</h2>
+                <h2>Top Table</h2>
             </div>
             <div class="card-content">
                 <p>This is the content of the card.</p>
@@ -72,7 +76,7 @@
         <div class="card">
             <div class="card-header">
                 <img src="icon.png" alt="Card Icon">
-                <h2>Card Title</h2>
+                <h2>One Person AVG Cost</h2>
             </div>
             <div class= "card-content">
                 <p>This is the content of the card.</p>
@@ -86,7 +90,7 @@
         <div class="card">
             <div class="card-header">
                 <img src="icon.png" alt="Card Icon">
-                <h2>Card Title</h2>
+                <h2>AVG Order Processing Time</h2>
             </div>
             <div class="card-content">
                 <p>This is the content of the card.</p>
@@ -100,7 +104,7 @@
 
 <div class="card" id="database-card">
     <div class="card-header">
-        <img src="icon.png" alt="Card Icon">
+        <img src="110.png" alt="Card Icon">
         <h2>Database Tables</h2>
     </div>
     <div class="card-content">
