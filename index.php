@@ -3,6 +3,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>King Meal Restuarant </title>
+    
     <!-- <link rel="icon" href="images/title.png" type="image/gif" sizes="18x18"> -->
     <link rel="icon" type="image/x-icon" href="images/title.png" sizes="22x22">
     <!-- custom css link -->
@@ -20,6 +21,8 @@
     <!-- Multiple font families -->
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> -->
   
     </head>
@@ -30,11 +33,12 @@
     <img src="images/kingmeal.png" width="140" height="100" >
     
         <ul class="navlist">
+        <li><a href="pages/dashboard.php" class="active">admin</a></li>
             <li><a href="#home" class="active">Home</a></li>
             <li><a href="#menu">Menu </a></li>
             <li><a href="#services">Promotion & Discount</a></li>
             <div class="dropdown">
-  <button class="dropbtn">Profile</button>
+  <button class="dropbtn-">Profile</button>
   <div class="dropdown-content">
     <a href="#">Profile</a>
     <a href="pages/register.php">Register</a>
@@ -42,6 +46,9 @@
   </div>
 </div>
             <li><a href="#contact">Contact</a></li>
+            
+            <li><a href="cart.php"><i style="font-size:24px" class="fa">&#xf07a;</i></a></li>
+
         </ul>
 
     
@@ -100,6 +107,7 @@
                             echo '<p>' . $row['description'] . '</p>';
                             echo '<p>Price: $' . $row['price'] . '</p>';
                             echo '<a href=#" class="order-button">Order Now</a>';
+                            echo '<button class="add-to-cart-button" >Add to Cart</button>';
                             echo '</div>';
                         
                         }
@@ -147,6 +155,7 @@
                     echo '<p>Price: $' . $row['price'] . '</p>';
                     // Add the "Order Now" button with a link
                     echo '<a href=#" class="order-button">Order Now</a>';
+                    echo '<button class="add-to-cart-button" >Add to Cart</button>';
                     echo '</div>';
                     
                   
@@ -170,7 +179,7 @@
             <div class="list">
 
                 <li><i class='bx bx-mobile-alt'></i> <a href="#">0113 629 630</a></li>
-                <li><i class='bx bx-map' ></i><a href="#">King Meals restaurant, No.11/2/1A, Padukka Rd, Godagama, Meegoda.</a></li>
+                <li><i class='bx bx-map' ></i><a href="#">King Meals restaurant,<br> No.11/2/1A, <br>Padukka Road,<br> Godagama,<br> Meegoda.</a></li>
                 
                 
             </div>
