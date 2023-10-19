@@ -4,6 +4,7 @@ body {
 }
 
 .topnav {
+    padding-top: 80px;
     background-color: #333;
     color: #f1f1f1;
     display: flex;
@@ -44,7 +45,40 @@ body {
     background-color: #111;
     overflow-x: hidden;
     padding-top: 60px; /* Adjust for the top navbar height */
-    border-right: 4px solid red;
+    border-right: 4px solid #dda53c;
+}
+
+.sidenav-r {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 60px; /* Adjust for the top navbar height */
+    
+}
+.order-table {
+    width: 50%;
+    margin-top: 100%;
+    border-collapse: collapse;
+}
+.order-table th, .order-table td {
+    border: 1px solid #e4dddd;
+    padding: 10px;
+    text-align: left;
+}
+.order-total {
+    margin-top: 20px;
+    padding-left: 20px;
+}
+.order-total h2 {
+    font-size: 24px;
+}
+.order-total-table {
+    margin-top: 20px;
 }
 
 .logo {
@@ -171,3 +205,6 @@ body {
 }
 
 /* You can customize the modal appearance further if needed. */
+
+
+

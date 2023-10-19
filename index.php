@@ -33,6 +33,7 @@
     <img src="images/kingmeal.png" width="140" height="100" >
     
         <ul class="navlist">
+        <li><a href="pages/chasier.php">Ca </a></li>
         <li><a href="pages/dashboard.php" class="active">admin</a></li>
             <li><a href="#home" class="active">Home</a></li>
             <li><a href="#menu">Menu </a></li>
@@ -48,6 +49,8 @@
             <li><a href="#contact">Contact</a></li>
             
             <li><a href="pages/cart.php"><i style="font-size:24px" class="fa">&#xf07a;</i></a></li>
+
+
 
         </ul>
 
