@@ -34,18 +34,18 @@
             <li><a href="#menu">Menu </a></li>
             <li><a href="#services" class="active">Promotion & Discount</a></li>
             <div class="dropdown">
-  <button class="dropbtn">Profile</button>
-  <div class="dropdown-content">
-    <a href="#">Profile</a>
-    <a href="pages/register.php">Register</a>
-    <a href="pages/loging.php">Login</a>
-  </div>
-</div>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="../pages/cart.php"><i style="font-size:24px" class="fa">&#xf07a;</i></a></li>
-
-    </ul>
-    <div class="bx bx-menu" id="menu-icon">
+    <button class="dropbtn-">Profile</button>
+        <div class="dropdown-content">
+        <a href="#">Profile</a>
+        <a href="register.php">Register</a>
+        <a href="loging.php">Login</a>
+        </div>
+    </div>
+            <li><a href="#contact">Contact</a></li>
+            
+            <li><a href="cart.php"><i style="font-size:24px" class="fa">&#xf07a;</i></a></li>
+        </ul>
+        <div class="bx bx-menu" id="menu-icon">
             
     </header>
 
