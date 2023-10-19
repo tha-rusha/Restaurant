@@ -84,47 +84,52 @@ body {
     .sidenav { padding-top: 15px; }
     .sidenav a { font-size: 18px; }
 }
-/* Your existing CSS styles... */
 
 .main {
     margin-left: 200px; /* Same as the width of the sidenav */
     padding: 20px; /* Add some padding to separate content from the sidenav and topnav */
     margin-top: 80px; /* Adjust for the top navbar and sidenav */
 }
-
+/*styls for cards*/
 .card-row {
     display: flex;
     justify-content: space-between;
 }
 
 .card {
-    flex: 0 0 calc(20% - 20px); /* Five cards in one row (20% width with 20px spacing) */
+    flex: 0 0 calc(20% - 20px);
     border: 1px solid #ddd;
     border-radius: 4px;
     padding: 10px;
+    transition: transform 0.2s; /* Add a smooth hover effect */
+
+    /* Additional styles for the cards */
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.card:hover {
+    transform: scale(1.05); /* Enlarge the card on hover */
 }
 
 .card-header {
     display: flex;
     align-items: center;
-}
-
-.card-header img {
-    width: 24px;
-    margin-right: 10px;
-}
-
-.card-header h2 {
-    margin: 0;
-    font-size: 18px;
+    justify-content: center; /* Center align the header content */
+    background-color: #af1616;
+    color: #fff;
+    padding: 8px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
 }
 
 .card-content {
-    padding: 10px 0;
+    padding: 10px;
 }
 
 .card-footer {
-    background-color: #eee;
+    background-color: #148f55;
     padding: 10px;
     text-align: center;
     border-radius: 0 0 4px 4px;
