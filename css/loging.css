@@ -6,7 +6,7 @@ body{
 	align-items: center;
 	min-height: 100vh;
 	font-family: 'Jost', sans-serif;
-	background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
+	background: linear-gradient(to bottom,#E8A317,#cab519d5 , #c38e52 );
 }
 .main{
 	width: 350px;
@@ -47,6 +47,20 @@ input{
 	outline: none;
 	border-radius: 5px;
 }
+
+select{
+	width: 66%;
+	height: 40px;
+	background: #e0dede;
+	justify-content: center;
+	display: flex;
+	margin: 20px auto;
+	padding: 10px;
+	border: none;
+	outline: none;
+	border-radius: 5px;
+}
+
 button{
 	width: 60%;
 	height: 40px;
@@ -54,7 +68,7 @@ button{
 	justify-content: center;
 	display: block;
 	color: #fff;
-	background: #573b8a;
+	background: #d0ae04;
 	font-size: 1em;
 	font-weight: bold;
 	margin-top: 20px;
@@ -65,7 +79,7 @@ button{
 	cursor: pointer;
 }
 button:hover{
-	background: #6d44b8;
+	background:#B8860B;
 }
 .login{
 	height: 460px;
@@ -75,7 +89,7 @@ button:hover{
 	transition: .8s ease-in-out;
 }
 .login label{
-	color: #573b8a;
+	color: #E8A317;
 	transform: scale(.6);
 }
 

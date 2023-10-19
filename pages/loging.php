@@ -21,17 +21,24 @@
 
 			<div class="signup">
 				<form>
-					<label for="chk" aria-hidden="true">Sign up</label>
+					<label for="chk" aria-hidden="true">Register</label>
 					<input type="text" name="txt" placeholder="User name" required="">
 					<input type="email" name="email" placeholder="Email" required="">
 					<input type="password" name="pswd" placeholder="Password" required="">
-					<button>Sign up</button>
+					<button>Register</button>
 				</form>
 			</div>
 
 			<div class="login">
 				<form>
 					<label for="chk" aria-hidden="true">Login</label>
+                	<select id="login-role" name="login-role" required>
+                        <option value="" disabled selected>Select Your Role</option>
+                        <option value="Customer">Customer</option>
+                        <option value="Admin">Admin</option>
+                        <option value="Cashier">Cashier</option>
+                        <option value="Staff">Staff</option>
+                    </select>
 					<input type="email" name="email" placeholder="Email" required="">
 					<input type="password" name="pswd" placeholder="Password" required="">
 					<button>Login</button>
