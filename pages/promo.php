@@ -6,7 +6,7 @@
     <!-- <link rel="icon" href="images/title.png" type="image/gif" sizes="18x18"> -->
     <link rel="icon" type="image/x-icon" href="images/title.png" sizes="22x22">
     <!-- custom css link -->
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
 
     <link rel="stylesheet"
     href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
@@ -27,24 +27,24 @@
 
     <!-- header section -->
     <header>
-    <img src="images/kingmeal.png" width="140" height="100" >
+    <img src="../images/kingmeal.png" width="140" height="100" >
     
         <ul class="navlist">
-            <li><a href="#home">Home</a></li>
+            <li><a href="../index.php">Home</a></li>
             <li><a href="#menu">Menu </a></li>
             <li><a href="#services" class="active">Promotion & Discount</a></li>
             <div class="dropdown">
-  <button class="dropbtn">Profile</button>
-  <div class="dropdown-content">
-    <a href="#">Profile</a>
-    <a href="pages/register.php">Register</a>
-    <a href="pages/login.php">Login</a>
-  </div>
-</div>
+    <button class="dropbtn-">Profile</button>
+        <div class="dropdown-content">
+        <a href="#">Profile</a>
+        <a href="register.php">Register</a>
+        <a href="loging.php">Login</a>
+        </div>
+    </div>
             <li><a href="#contact">Contact</a></li>
+            
+            <li><a href="cart.php"><i style="font-size:24px" class="fa">&#xf07a;</i></a></li>
         </ul>
-
-    
         <div class="bx bx-menu" id="menu-icon">
             
     </header>
@@ -54,7 +54,7 @@
     <div class="main-text">
         <h2>Promotions & <span>Discounts</span></h2>
     </div>
-    <div class="promotion-cards">
+    <div class="menu-cards">
     <?php
         // Connect to the database and retrieve promotion items
         $db = new mysqli("localhost", "root", "", "hotel");
@@ -63,8 +63,8 @@
 
         // Loop through promotion items and display them as cards
         while ($row = $result->fetch_assoc()) {
-            echo '<div class="promotion-card">';
-            echo '<img src="' . $row['itemImage'] . '" alt="' . $row['itemName'] . '">';
+            echo '<div class="menu-card">';
+            echo '<img src="'. $row['itemImage'] . '" alt="' . $row['itemName'] . '">';
             echo '<h3>' . $row['itemName'] . '</h3>';
             echo '<p>' . $row['description'] . '</p>';
             echo '<p>Price: $' . $row['price'] . '</p>';
@@ -75,6 +75,8 @@
         ?>
     </div>
      
+    </section>
+    <section>
     </section>
 
     <!-- end section -->

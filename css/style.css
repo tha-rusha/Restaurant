@@ -712,14 +712,14 @@ header.sticky{
     text-align: center;
   }
   
-  .main-text h2 {
+  /* .main-text h2 {
     font-size: 36px;
-    color: #333;
-  }
-  
+    color: #ffffff;
+  } */
+/*   
   .main-text span {
     color: #e67e22;
-  }
+  } */
   
   .promotion-cards {
     display: flex;
@@ -730,12 +730,13 @@ header.sticky{
   }
   
   .promotion-card {
-    text-align: center;
+    border-radius: 15px;
     width: 300px;
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    padding: 10px;
+    background-color: #5e0707;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    text-align: center;
   }
   
   .promotion-card img {

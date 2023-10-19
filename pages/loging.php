@@ -19,7 +19,7 @@
 	<div class="main">  	
 		<input type="checkbox" id="chk" aria-hidden="true">
 
-			<div class="signup">
+			<div class="signup-section">
 				<form>
 					<label for="chk" aria-hidden="true">Register</label>
 					<input type="text" name="txt" placeholder="User name" required="">
