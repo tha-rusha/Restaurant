@@ -12,16 +12,26 @@
             <h2>Login</h2>
             <h3>Sign in to your account and make sure all details are accurate.</h3>
             <div class="form-group">
-                <label for="user-name">UserName(Email)</label>
-                <input type="text" id="user-name" name="name" required>
+                <label for="user-name">Email</label>
+                <input type="text" id="user-name" name="name" class="box" required>
             </div>
 
             <div class="form-group">
                 <label for="password">Password</label>
-                <input type="password" id="password" name="password" required>
+                <input type="password" id="password" name="password" class="box" required>
             </div>
 
-            <button type="submit">Sign in</button>
+            <div class="form-group">
+                <label for="user-role">Who are you?</label>
+                <select id="user-role" name="user-role" class="box" required>
+                    <option value="customer">Customer</option>
+                    <option value="admin">Admin</option>
+                    <option value="cashier">Cashier</option>
+                    <option value="staff">Staff</option>
+                </select>
+            </div>
+
+            <button type="submit" class="box">Sign in</button>
         </form>
         <p>Don't have an account? <a href="register.html">Register</a></p>
     </div>
