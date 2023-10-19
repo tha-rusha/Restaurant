@@ -61,7 +61,7 @@
         <!-- Card 2 -->
         <div class="card">
             <div class="card-header">
-                <img src="icon.png" alt="Card Icon">
+                <img src="../images/promo/kingmeal.png" alt="Card Icon">
                 <h2>Top Menu Items.</h2>
             </div>
             <div class="card-content">
@@ -115,6 +115,18 @@
         <p>Card Footer</p>
     </div>
 </div>-->
+
+<!-- Add this code within your <body> element -->
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>Database Tables</h2>
+        <div id="table-data"></div>
+    </div>
+</div>
+
+
+
 
 
 </body>
