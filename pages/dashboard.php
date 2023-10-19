@@ -34,10 +34,10 @@
         <div class="card">
             <div class="card-header">
                 <img src="icon.png" alt="Card Icon">
-                <h2>Top Customer.</h2>
+                <h2>Top Menu Items.</h2>
             </div>
             <div class="card-content">
-                <p>Top Customer.</p>
+                <p>This is the content of the card.</p>
             </div>
             <div class="card-footer">
                 <p>Card Footer</p>
@@ -58,11 +58,11 @@
             </div>
         </div>
         
-        <!-- Card 3 -->
+        <!-- Card 2 -->
         <div class="card">
             <div class="card-header">
                 <img src="icon.png" alt="Card Icon">
-                <h2>Top Table</h2>
+                <h2>Top Menu Items.</h2>
             </div>
             <div class="card-content">
                 <p>This is the content of the card.</p>
@@ -86,11 +86,11 @@
             </div>
         </div>
         
-        <!-- Card 5 -->
+        <!-- Card 2 -->
         <div class="card">
             <div class="card-header">
                 <img src="icon.png" alt="Card Icon">
-                <h2>AVG Order Processing Time</h2>
+                <h2>Top Menu Items.</h2>
             </div>
             <div class="card-content">
                 <p>This is the content of the card.</p>
@@ -101,7 +101,7 @@
         </div>
     </div>
 </div>
-
+<!--
 <div class="card" id="database-card">
     <div class="card-header">
         <img src="110.png" alt="Card Icon">
@@ -114,7 +114,7 @@
     <div class="card-footer">
         <p>Card Footer</p>
     </div>
-</div>
+</div>-->
 
 
 </body>
