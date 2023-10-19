@@ -21,7 +21,7 @@
 
 			<div class="signup-section">
 				<form>
-					<label for="chk" aria-hidden="true">Register</label>
+					<label id="reg" for="chk" aria-hidden="true">Register</label>
 					<input type="text" name="txt" placeholder="User name" required="">
 					<input type="email" name="email" placeholder="Email" required="">
 					<input type="password" name="pswd" placeholder="Password" required="">
