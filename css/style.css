@@ -704,6 +704,78 @@ header.sticky{
     
   }
 
+/* CSS for promotion section */
 
+/* Promotion section */
+.services {
+    padding: 80px 0;
+    text-align: center;
+  }
+  
+  .main-text h2 {
+    font-size: 36px;
+    color: #333;
+  }
+  
+  .main-text span {
+    color: #e67e22;
+  }
+  
+  .promotion-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
+  }
+  
+  .promotion-card {
+    text-align: center;
+    width: 300px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .promotion-card img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  
+  .promotion-card h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .promotion-card p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  .order-button {
+    display: inline-block;
+    background-color: #e67e22;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-right: 10px;
+  }
+  
+  .add-to-cart-button {
+    display: inline-block;
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  
  
     
