@@ -66,8 +66,8 @@
         // Loop through promotion items and display them as cards
         while ($row = $result->fetch_assoc()) {
             echo '<div class="promotion-card">';
-            echo '<img src="' . $row['image'] . '" alt="' . $row['name'] . '">';
-            echo '<h3>' . $row['name'] . '</h3>';
+            echo '<img src="../'. $row['itemImage'] . '" alt="' . $row['itemName'] . '">';
+            echo '<h3>' . $row['itemName'] . '</h3>';
             echo '<p>' . $row['description'] . '</p>';
             echo '</div>';
         }
@@ -86,7 +86,7 @@
     </section>
       
     <!-- custom js link -->
-    <script type="text/javascript" src="js/script.js"></script> 
+    <script type="text/javascript" src="../js/script.js"></script> 
 
     <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>      -->
     </body>
