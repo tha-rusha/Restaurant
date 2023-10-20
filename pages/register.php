@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="container">
-        <form id="registration-form">
+        <form id="registration-form" action="registerAction.php" method="POST">
             <h2>Register for an Account</h2>
             <div class="form-group">
                 <label for="name">Name</label>
@@ -19,6 +19,14 @@
                 <input type="email" id="email" name="email" required>
             </div>
             <div class="form-group">
+                <label for="address">Address</label>
+                <input type="text" id="address" name="address" required>
+            </div>
+            <div class="form-group">
+                <label for="telephone">Telephone</label>
+                <input type="text" id="telephone" name="telephone" required>
+            </div>
+            <div class="form-group">
                 <label for="password">Password</label>
                 <input type="password" id="password" name="password" required>
             </div>
@@ -26,7 +34,7 @@
                 <label for="confirm-password">Confirm Password</label>
                 <input type="password" id="confirm-password" name="confirm-password" required>
             </div>
-            <button type="submit">Register</button>
+            <button type="submit" >Register</button>
         </form>
     </div>
 </body>

@@ -35,7 +35,7 @@ label {
 input[type="text"],
 input[type="email"],
 input[type="password"] {
-    width: 100%;
+    width: 350px;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 3px;
@@ -54,5 +54,5 @@ button {
 }
 
 button:hover {
-    background-color:#dda53c;
+    background-color:#335ee2;
 }
