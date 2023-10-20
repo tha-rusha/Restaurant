@@ -9,11 +9,16 @@
 </head>
 <body>
 
+<style>
+        .search-bar {
+            position: absolute;
+            top: 100px;
+            right: 10px;
+        }
+    </style>
+
 <header>
     <img src="../images/kingmeal.png" width="140" height="100" >
-
-    
-    
         <ul class="navlist">
         <li><a href="pages/chasier.php">Ca </a></li>
         <li><a href="pages/dashboard.php" class="active">admin</a></li>
@@ -39,85 +44,110 @@
 <br>
 <section class=search>
 <!-- <div class="topnav"> -->
-    <h1 class="page-name">Dashboard</h1>
+   
     <div class="search-bar">
         <input type="text" placeholder="Search...">
     </div>
 <!-- </div> -->
 </section>
 
+
+<a href="dashboard.php" style="display: inline-block; padding: 10px 20px; background-color: #0077FF; color: #FFFFFF; text-align: center; text-decoration: none; border: 2px solid #0077FF; border-radius: 5px;">
+        <img src="/images/kingmeal.png" alt="Button Image" style="width: 100px; height: 100px;">
+    </a>
+
 <div class="sidenav">
     <div class="logo">
         <img src="../images/kingmeal.png" alt="Your Logo">
         <h1>King Meal<br>Family Restuarant</h1>
     </div>
-    <a href="../index.php">Customer</a>
-    <a href="#">Menu</a>
-    <a href="#">Profile</a>
-    <a href="#">Help</a>
+    <a href="../index.php" style="margin-top: 10px;">Customer</a>
+    <a href="#" style="margin-top: 20px;">Menu</a>
+    <a href="#" style="margin-top: 20px;">Profile</a>
+    <a href="#" style="margin-top: 20px;">Help</a>
 </div>
 
-<div class="sidenav-r">
-<div class="sidebar right">
-    <h2>Order</h2>
-      
-      <table class="order-table">
-        <thead>
-          <tr>
-            <th>Item</th>
-            <th>Quantity</th>
-            <th>Price</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-        </tbody>
-      </table>
-      <br>
-      <h2> Your Order </h2>
-      <div class="order-total">
-        
-        <table class="order-total-table"><br>
-          <tr>
-            <th></th>
-            <td></td>
-          </tr>
-          <tr>
-            <th>Sub Total</th>
-            <td>:</td>
-          </tr>
-          <tr>
-            <th>Discount</th>
-            <td>:</td>
-          </tr>
-          <tr>
-         <th>Total</th>
-            <td>:</td>
-          </tr>
+<!-- Rest of your HTML code -->
 
-        </table>
+<div class="center" style="text-align: center;">
+    <img src="../images/promo/101.png" width="200" height="400" alt="Pasta">
+</div>
+
+<!-- Rest of your HTML code -->
+
+
+
+
+<div class="sidenav-r" style="width: 280px; height: 100%; position: fixed; top: 0; right: 0; background-color: #333; overflow-y: scroll;">
+    <div class="sidebar right" style="padding: 20px; color: #fff;">
+
+
+    <h2>Order Your Items </h2>
+      
+    <table class="order-table" style="width: 100%; border-collapse: collapse; margin-top: 20px;">
+    <thead>
+        <tr>
+            <th style="padding: 10px; text-align: left; border-bottom: 1px solid #000;">Item</th>
+            <th style="padding: 10px; text-align: center; border-bottom: 1px solid #000;">Quantity</th>
+            <th style="padding: 10px; text-align: center; border-bottom: 1px solid #000;">Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td style="padding: 10px; text-align: left; border-bottom: 1px solid #ccc;"></td>
+            <td style="padding: 10px; text-align: center; border-bottom: 1px solid #ccc;"></td>
+            <td style="padding: 10px; text-align: center; border-bottom: 1px solid #ccc;"></td>
+        </tr>
+        <tr>
+            <td style="padding: 10px; text-align: left; border-bottom: 1px solid #ccc;"></td>
+            <td style="padding: 10px; text-align: center; border-bottom: 1px solid #ccc;"></td>
+            <td style="padding: 10px; text-align: center; border-bottom: 1px solid #ccc;"></td>
+        </tr>
+        <tr>
+            <td style="padding: 10px; text-align: left; border-bottom: 1px solid #ccc;"></td>
+            <td style="padding: 10px; text-align: center; border-bottom: 1px solid #ccc;"></td>
+            <td style="padding: 10px; text-align: center; border-bottom: 1px solid #ccc;"></td>
+        </tr>
+        <tr>
+            <td style="padding: 10px; text-align: left; border-bottom: 1px solid #ccc;"></td>
+            <td style="padding: 10px; text-align: center; border-bottom: 1px solid #ccc;"></td>
+            <td style="padding: 10px; text-align: center; border-bottom: 1px solid #ccc;"></td>
+        </tr>
+    </tbody>
+</table>
+
+<h2 style="margin-top: 20px;"> Your Order </h2>
+<div class="order-total">
+    <table class="order-total-table" style="width: 100%; border-collapse: collapse; margin-top: 10px;">
+        <tr>
+            <th style="padding: 20px; text-align: left; border-bottom: 1px solid #000;"></th>
+            <td style="padding: 20px; text-align: right; border-bottom: 1px solid #000;"></td>
+        </tr>
+        <tr>
+            <th style="padding: 20px; text-align: left; border-bottom: 1px solid #000;">Sub Total  :</th>
+     
+        </tr>
+        <tr>
+            <th style="padding: 20px; text-align: left; border-bottom: 1px solid #000;">Discount  :</th>
+            
+        </tr>
+        <tr>
+            <th style="padding: 20px; text-align: left;">Total  :</th>
+            
+        </tr>
+    </table>
+</div>
+
         
       </div>
-    
+      
+      <button style="background-color: orange; color: black; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; font-weight: bold; margin-top: 20px; margin-left: auto; margin-right: auto; display: block;">Place Order</button>
+
+
+        <!-- Your content here -->
+    </div>
+</div>
+
 
 
 
