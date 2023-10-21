@@ -1,3 +1,5 @@
+
+
 <html>
 <head>
     <meta charset="utf-8">
@@ -56,36 +58,23 @@
     <!-- promotion and discount section -->
 <section class="services" id="services">
     <div class="main-text">
-        <h2>Cart<span></span></h2>
+        <h2>Cart <span>Items</span></h2>
     </div>
-    <div class="promotion-cards">
-        <?php
-        // Connect to the database and retrieve promotion items
-        $db = new mysqli("localhost", "root", "", "hotel");
-        $query = "SELECT * FROM promotion";
-        $result = $db->query($query);
+    
 
-        // Loop through promotion items and display them as cards
-        while ($row = $result->fetch_assoc()) {
-            echo '<div class="promotion-card">';
-            echo '<img src="../'. $row['itemImage'] . '" alt="' . $row['itemName'] . '">';
-            echo '<h3>' . $row['itemName'] . '</h3>';
-            echo '<p>' . $row['description'] . '</p>';
-            echo '</div>';
-        }
-        ?>
+
+    
     </div>
-     
     </section>
 
-    <!-- end section -->
+    <!-- end section
     <section class="end">
         <div class="last-text">
         <p style="text-align: center;"> © COPYRIGHT 2023 | KING MEAL FAMILY RESTUARANT | ALL RIGHTS RESERVED.</p>
         </div>
         
 
-    </section>
+    </section> -->
       
     <!-- custom js link -->
     <script type="text/javascript" src="../js/script.js"></script> 

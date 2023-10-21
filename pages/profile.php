@@ -68,7 +68,7 @@ if (isset($_SESSION['userEmail'])) {
     <div class="sidenav">
     <div class="logo">
         <img src="../images/profile.png" alt="Your Logo">
-        <h1>User</h1>
+        
     </div>
     <?php
                         // Connect to the database and retrieve menu items
