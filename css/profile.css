@@ -1,154 +1,205 @@
 body {
-    background-color: #f9f9fa
+    font-family: "Lato", sans-serif;
+    margin: 0; /* Remove default margin */
 }
 
-.padding {
-    padding: 3rem !important
-}
-
-.user-card-full {
-    overflow: hidden;
-}
-
-.card {
-    border-radius: 5px;
-    -webkit-box-shadow: 0 1px 20px 0 rgba(69,90,100,0.08);
-    box-shadow: 0 1px 20px 0 rgba(69,90,100,0.08);
-    border: none;
-    margin-bottom: 30px;
-}
-
-.m-r-0 {
-    margin-right: 0px;
-}
-
-.m-l-0 {
-    margin-left: 0px;
-}
-
-.user-card-full .user-profile {
-    border-radius: 5px 0 0 5px;
-}
-
-.bg-c-lite-green {
-        background: -webkit-gradient(linear, left top, right top, from(#f29263), to(#ee5a6f));
-    background: linear-gradient(to right, #ee5a6f, #f29263);
-}
-
-.user-profile {
-    padding: 20px 0;
-}
-
-.card-block {
-    padding: 1.25rem;
-}
-
-.m-b-25 {
-    margin-bottom: 25px;
-}
-
-.img-radius {
-    border-radius: 5px;
-}
-
-
- 
-h6 {
-    font-size: 14px;
-}
-
-.card .card-block p {
-    line-height: 25px;
-}
-.profile-container {
+.topnav {
+    padding-top: 80px;
+    background-color: #333;
+    color: #f1f1f1;
     display: flex;
+    align-items: center;
     justify-content: space-between;
     padding: 20px;
 }
 
-.profile-left {
-    flex: 1;
+.page-name {
+    margin: 0;
+    font-size: 24px;
+    padding-left: 220px; /* Add left padding for space */
+    /* You can add more styles as needed */
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    padding-right: 10px;
+}
+
+.search-bar input[type="text"] {
+    padding: 5px;
+    border: none;
+    border-radius: 4px;
+    margin-right: 10px;
+    width: 500px;
+    /* Add more styles for the search bar */
+}
+
+.sidenav {
+    margin-top: 120px;
+    height: 100%;
+    width: 320px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 60px; /* Adjust for the top navbar height */
+    border-left: 4px solid #dda53c;
+    border-top:4px  #dda53c;
+    border-radius: 15px;
+}
+
+.order-table {
+    width: 50%;
+    margin-top: 100%;
+    border-collapse: collapse;
+}
+.order-table th, .order-table td {
+    border: 1px solid #e4dddd;
+    padding: 10px;
+    text-align: left;
+}
+.order-total {
+    margin-top: 20px;
+    padding-left: 20px;
+}
+.order-total h2 {
+    font-size: 24px;
+}
+.order-total-table {
+    margin-top: 20px;
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo img {
+    width: 100px;
+}
+
+.logo h1 {
+    color: #f1f1f1;
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.sidenav a {
+    padding: 6px 6px 6px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.main {
+    margin-left: 200px; /* Same as the width of the sidenav */
+    padding: 20px; /* Add some padding to separate content from the sidenav */
+    margin-top: 80px; /* Adjust for the top navbar and sidenav */
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav { padding-top: 15px; }
+    .sidenav a { font-size: 18px; }
+}
+
+.main {
+    margin-left: 200px; /* Same as the width of the sidenav */
+    padding: 20px; /* Add some padding to separate content from the sidenav and topnav */
+    margin-top: 80px; /* Adjust for the top navbar and sidenav */
+}
+/*styls for cards*/
+.card-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card {
+    flex: 0 0 calc(20% - 20px);
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    transition: transform 0.2s; /* Add a smooth hover effect */
+
+    /* Additional styles for the cards */
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
-.profile-right {
-    flex: 1;
+.card:hover {
+    transform: scale(1.05); /* Enlarge the card on hover */
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center align the header content */
+    background-color: #af1616;
+    color: #fff;
+    padding: 8px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.card-content {
+    padding: 10px;
+}
+
+.card-footer {
+    background-color: #148f55;
+    padding: 10px;
+    text-align: center;
+    border-radius: 0 0 4px 4px;
+}
+/* CSS code */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
     padding: 20px;
-    background-color: #f9f9fa;
+    border: 1px solid #888;
+    width: 50%;
+    border-radius: 4px;
+    position: relative;
 }
 
-
-@media only screen and (min-width: 1400px){
-p {
-    font-size: 14px;
-}
-}
-
-.card-block {
-    padding: 1.25rem;
-}
-
-.b-b-default {
-    border-bottom: 1px solid #e0e0e0;
-}
-
-.m-b-20 {
-    margin-bottom: 20px;
-}
-
-.p-b-5 {
-    padding-bottom: 5px !important;
-}
-
-.card .card-block p {
-    line-height: 25px;
-}
-
-.m-b-10 {
-    margin-bottom: 10px;
-}
-
-.text-muted {
-    color: #919aa3 !important;
-}
-
-.b-b-default {
-    border-bottom: 1px solid #e0e0e0;
-}
-
-.f-w-600 {
-    font-weight: 600;
-}
-
-.m-b-20 {
-    margin-bottom: 20px;
-}
-
-.m-t-40 {
-    margin-top: 20px;
-}
-
-.p-b-5 {
-    padding-bottom: 5px !important;
-}
-
-.m-b-10 {
-    margin-bottom: 10px;
-}
-
-.m-t-40 {
-    margin-top: 20px;
-}
-
-.user-card-full .social-link li {
-    display: inline-block;
-}
-
-.user-card-full .social-link li a {
+.close {
+    position: absolute;
+    top: 0;
+    right: 10px;
     font-size: 20px;
-    margin: 0 10px 0 0;
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
+    font-weight: bold;
+    cursor: pointer;
 }
 
+.close:hover {
+    color: #f00;
+}
 
+/* You can customize the modal appearance further if needed. */
+
+p{
+    color: #f1f1f1;
+    font-size: 20px;
+    margin: 10px 0;
+    text-align: center;
+}
