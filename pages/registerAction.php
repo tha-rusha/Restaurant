@@ -1,5 +1,7 @@
 <?php
 // Connect to the database
+require_once("../dbConfig.php");
+
 $name = $_POST['name'];
 $email = $_POST['email'];
 $address = $_POST['address'];
@@ -7,34 +9,54 @@ $telephone = $_POST['telephone'];
 $password = $_POST['password'];
 $confirmPassword = $_POST['confirm-password'];
 
-    // hash the password
-    $password = password_hash($password, PASSWORD_DEFAULT);
+if($password == $confirmPassword){
+    // $hashPassword = password_hash($password, PASSWORD_DEFAULT);
+    $hashPassword = md5($password);
 
-$conn = new mysqli("localhost", "root", "", "hotel");
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}else{
-    // echo "Connected successfully";
-    $stmt = $conn->prepare("insert into customer(customerName, email, address, tpNumber, password, confirmPassword) values(?, ?, ?, ?, ?, ?)");
-    $stmt->bind_param("ssssss", $name, $email, $address, $telephone, $password, $confirmPassword);
-    $stmt->execute();
-    echo "<script>alert('Registration Successful!')</script>";
-    echo "<script>window.location = 'register.php'</script>";
-    $stmt->close();
-    $conn->close();
-
-   
+    try{
+        // Check if the email already exists in the database
+        if (checkUserByEmail($email)) {
+            echo "User with email $email already exists.";
+            exit();
+        }else{
+        $sql = "INSERT INTO customer (customerName, email, address, tpNumber, password) VALUES ('$name', '$email', '$address', '$telephone', '$hashPassword')";
+        if(mysqli_query($conn, $sql)){
+            echo "Registration successful";
+            session_start();
+            $_SESSION['message'] = "Registration successful. Please login to continue.";    
+            header("Location:login.php");
+            exit();
+        }else{
+            echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+        }
+        }
+    }catch(Exception $e){
+        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
 }
-
-// Check if the passwords match
-if ($password != $confirmPassword) {
-    echo "<script>alert('Passwords do not match!')</script>";
-    echo "<script>window.location = 'register.php'</script>";
+else{
+    echo "Passwords do not match";
     exit();
+}  
+
+//Check if the email already exists in the database
+function checkUserByEmail($email) {
+    try {
+        
+        $conn = new PDO("mysql:host=localhost;dbname=hotel", "root", "");
+        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $sql = "SELECT * FROM customer WHERE email = :email";
+        $stmt = $conn->prepare($sql);
+        $stmt->bindParam(":email", $email, PDO::PARAM_STR);
+        $stmt->execute();
+
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        return ($result !== false);
+    } catch (PDOException $e) {
+        return false; 
+    }
 }
-
-// Hash the
-
 
 
 ?>
