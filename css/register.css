@@ -2,12 +2,13 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f2f2f2;
     margin: 0;
+
     padding: 0;
 }
 
 .container {
     max-width: 400px;
-    margin: 0 auto;
+    margin: 120px auto;
     background-color: #fff;
     padding: 20px;
     border-radius: 5px;
@@ -24,6 +25,7 @@ form h2 {
     margin-bottom: 20px;
 }
 
+
 .form-group {
     margin-bottom: 10px;
 }
@@ -35,7 +37,7 @@ label {
 input[type="text"],
 input[type="email"],
 input[type="password"] {
-    width: 100%;
+    width: 350px;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 3px;
@@ -44,6 +46,7 @@ input[type="password"] {
 }
 
 button {
+    width: 377px;
     background-color:#dda53c;
     color: #fff;
     padding: 10px;
@@ -51,8 +54,9 @@ button {
     border-radius: 3px;
     cursor: pointer;
     transition: background-color 0.3s;
+    font-weight: 500;
 }
 
 button:hover {
-    background-color:#dda53c;
+    background-color:#335ee2;
 }

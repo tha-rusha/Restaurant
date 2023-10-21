@@ -43,14 +43,11 @@
   <div class="dropdown-content">
     <a href="#">Profile</a>
     <a href="pages/register.php">Register</a>
-    <a href="pages/loging.php">Login</a>
+    <a href="pages/login.php">Login</a>
   </div>
 </div>
             <li><a href="#contact">Contact</a></li>
-            
             <li><a href="pages/cart.php"><i style="font-size:24px" class="fa">&#xf07a;</i></a></li>
-
-
 
         </ul>
 
