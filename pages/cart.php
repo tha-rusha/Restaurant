@@ -35,7 +35,7 @@
         <ul class="navlist">
             <li><a href="../index.php">Home</a></li>
             <li><a href="#menu">Menu </a></li>
-            <li><a href="../promo.php" >Promotion & Discount</a></li>
+            <li><a href="promo.php" >Promotion & Discount</a></li>
             <div class="dropdown">
   <button class="dropbtn">Profile</button>
   <div class="dropdown-content">
