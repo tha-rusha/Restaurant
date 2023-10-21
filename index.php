@@ -194,22 +194,22 @@
             
         </div>
         <div class="contact-form">
-            <form action="" id="contactForm">
+            <form action="feedbackAction.php" id="contactForm" method="POST">
                 <h2>Feedback<div class="lds-ripple"><div></div><div></div></div></h2><br>
                 
                 <div class="alert">Your Message Sent !</div>
                 <!-- <div class="error">Something Went Wrong !</div> -->
                 <div class="inputBox">          
-                    <input type="text" id="name" placeholder="Your Name" required>
+                    <input type="text" id="name" placeholder="Your Name" name="name" required>
                 </div>
                 <div class="inputBox">
-                    <input type="text" id="email" placeholder="Your Email" required>
+                    <input type="text" id="email" placeholder="Your Email" name="email" required>
                 </div>
                 <div class="inputBox">
-                    <input type="text" id="mobile" placeholder="Your Mobile Number" required>
+                    <input type="text" id="mobile" placeholder="Your Mobile Number" name="mobile" required>
                 </div>
                 <div class="inputBox">
-                    <textarea name="" id="msgContent" cols="35" rows="10" placeholder="How Can I Help You?" required></textarea>
+                <textarea name="msgContent" id="msgContent" cols="35" rows="10" placeholder="How Can I Help You?" required></textarea>
                 </div>
                 <div class="inputBox">
                     <button type="submit" value="Send Message" class="btn" required>Submit</button>
@@ -244,6 +244,10 @@
             
             alert("Item added to cart");
         }
+
+        // function feedback(){
+        //     arlet ("feedback sent");
+        // }
 
     </script>
 
