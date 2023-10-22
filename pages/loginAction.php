@@ -1,6 +1,5 @@
 <?php
 require_once('../dbConfig.php');
-
 function login($email, $password) {
     try {
         $pdo = new PDO("mysql:host=localhost;dbname=hotel", "root", "");
@@ -25,8 +24,6 @@ function login($email, $password) {
         echo "Error: " . $e->getMessage();
     }
 }
-
-
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST["email"];
     $password = $_POST["password"];

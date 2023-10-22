@@ -115,7 +115,7 @@
                         }
                         ?>
                     </div>
-  </div>
+                </div>
 
   <div class="column" style="background-color:#bbb;">
     <h2>Today Top Pick</h2>
@@ -163,10 +163,7 @@
                     $itemName = $row['itemName'];
                     $price = $row['price'];
                     echo '<button class="add-to-cart-button" onclick="testFunc(\'' . $itemCode . '\', \'' . $itemName . '\', \'' . $price . '\')">Add to Cart</button>';
-
                     echo '</div>';
-                    
-                  
                 }
             ?>
             <!-- -->

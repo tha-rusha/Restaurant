@@ -1,7 +1,5 @@
 <?php
-// Connect to the database
 require_once("../dbConfig.php");
-
 $name = $_POST['name'];
 $email = $_POST['email'];
 $address = $_POST['address'];
@@ -10,11 +8,9 @@ $password = $_POST['password'];
 $confirmPassword = $_POST['confirm-password'];
 
 if($password == $confirmPassword){
-    // $hashPassword = password_hash($password, PASSWORD_DEFAULT);
     $hashPassword = md5($password);
 
     try{
-        // Check if the email already exists in the database
         if (checkUserByEmail($email)) {
             echo "User with email $email already exists.";
             exit();
