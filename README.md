@@ -1,6 +1,8 @@
 # King Meal Restaurant Management Website
 
-![King Meal Logo](images/kingmeal.png)
+<p align="center">
+  <img src="images/kingmeal.png" alt="King Meal Logo" width="100" height="100">
+</p>
 
 The King Meal Restaurant Management Website is a comprehensive online platform designed to facilitate seamless restaurant operations. This website serves multiple user roles, including customers, admin, cashiers, and staff. It offers a user-friendly interface with various features and functionalities to enhance the restaurant's efficiency and improve the overall customer experience.
 
@@ -15,13 +17,36 @@ The King Meal Restaurant Management Website is a comprehensive online platform d
 - [Languages](#languages)
 - [Screenshots](#screenshots)
 - [Contributors](#contributors)
-- [License](#license)
+- [Acknowledgement](#acknowledgement)
 
 ---
 
 ## Introduction
 
 The King Meal Restaurant Management Website is the beating heart of the King Meal Restaurant, catering to a diverse array of stakeholders, including customers, admin personnel, cashiers, and dedicated staff. This online platform encapsulates the very essence of modern restaurant management, melding innovation with tradition, and delivering a new standard of excellence.
+
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" rel="noreferrer"> 
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" alt="html" width="40" height="40"/> 
+</a>
+<a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" rel="noreferrer"> 
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" alt="css" width="40" height="40"/> 
+</a>
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> 
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> 
+</a>
+<a href="https://www.php.net" target="_blank" rel="noreferrer"> 
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg" alt="php" width="40" height="40"/> 
+</a>
+<a href="https://www.mysql.com" target="_blank" rel="noreferrer"> 
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg" alt="mysql" width="40" height="40"/> 
+</a>
+<a href="https://code.visualstudio.com" target="_blank" rel="noreferrer"> 
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/visualstudio/visualstudio-plain.svg" alt="vscode" width="40" height="40"/> 
+</a>
+<a href="https://www.apachefriends.org/index.html" target="_blank" rel="noreferrer"> 
+  <img src="https://img.icons8.com/windows/32/000000/xampp.png" alt="XAMPP Icon" title="XAMPP"> 
+</a>
+
 
 ## Features
 
@@ -50,20 +75,20 @@ Provide instructions for setting up and running the project locally.
 
 ## Technologies Used
 
-- CSS (Cascading Style Sheets) ![CSS Icon](https://img.icons8.com/color/48/000000/css3.png)
-- PHP (Hypertext Preprocessor) ![PHP Icon](https://img.icons8.com/officel/16/000000/php-logo.png)
-- JavaScript ![JavaScript Icon](https://img.icons8.com/color/48/000000/javascript.png)
-- Database (MySQL) ![MySQL Icon](https://img.icons8.com/ios-filled/50/000000/mysql-logo.png)
-- XAMPP ![XAMPP Icon](https://img.icons8.com/windows/32/000000/xampp.png)
-- Visual Studio Code (VS Code) ![VS Code Icon](https://img.icons8.com/fluent/48/000000/visual-studio-code-2019.png)
+- CSS (Cascading Style Sheets)
+- PHP (Hypertext Preprocessor)
+- JavaScript
+- Database (MySQL)
+- XAMPP
+- Visual Studio Code (VS Code)
 
 ## Languages
 
-- HTML ![HTML Icon](https://img.icons8.com/color/48/000000/html-5.png)
-- CSS ![CSS Icon](https://img.icons8.com/color/48/000000/css3.png)
-- JavaScript ![JavaScript Icon](https://img.icons8.com/color/48/000000/javascript.png)
-- PHP ![PHP Icon](https://img.icons8.com/officel/16/000000/php-logo.png)
-- SQL ![SQL Icon](https://img.icons8.com/ios-filled/50/000000/database-restore.png)
+- HTML
+- CSS
+- JavaScript
+- PHP
+- SQL
 
 
 ## Screenshots
