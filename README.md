@@ -57,7 +57,14 @@ The King Meal Restaurant Management Website is the beating heart of the King Mea
 
 ## Usage
 
-Provide instructions for setting up and running the project locally.
+To run the King Meal Restaurant Management System on your local machine, follow these steps:
+
+- Ensure that you have XAMPP installed on your system.
+- Clone this repository to your local machine.
+- Open XAMPP and start the Apache and MySQL services.
+- Import the provided MySQL database file.
+- Copy the project files to the 'htdocs' directory in your XAMPP installation folder.
+- Open a web browser and navigate to http://localhost/restaurant to access the website.
 
 ## Technologies Used
 
