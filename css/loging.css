@@ -74,8 +74,13 @@ button{
 	justify-content: center;
 	display: block;
 	color: #fff;
+<<<<<<< Updated upstream
 	background: #7c1606;
 	font-size: 1em;
+=======
+	background: #573b8a;
+	font-size: 1em; 
+>>>>>>> Stashed changes
 	font-weight: bold;
 	margin-top: 20px;
 	outline: none;
