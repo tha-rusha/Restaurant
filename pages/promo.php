@@ -32,7 +32,7 @@
     
         <ul class="navlist">
             <li><a href="../index.php">Home</a></li>
-            <li><a href="../index.php">Menu </a></li>
+            <li><a href="../index.php#menu">Menu </a></li>
             <li><a href="promo.php" class="active">Promotion & Discount</a></li>
             <div class="dropdown">
     <button class="dropbtn-">Profile</button>

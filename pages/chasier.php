@@ -23,7 +23,7 @@
         <li><a href="chasier.php" class="active">Cashier </a></li>
         <li><a href="dashboard.php">admin</a></li>
             <li><a href="../index.php">Home</a></li>
-            <li><a href="../index.php">Menu </a></li>
+            <li><a href="../index.php#menu">Menu </a></li>
             <li><a href="promo.php">Promotion & Discount</a></li>
             <div class="dropdown">
   <button class="dropbtn-">Profile</button>
@@ -33,7 +33,7 @@
     <a href="login.php">Login</a>
   </div>
 </div>
-            <li><a href="../index.php">Contact</a></li>  
+            <li><a href="../index.php#contact">Contact</a></li>  
             <li><a href="cart.php"><i style="font-size:24px" class="fa">&#xf07a;</i></a></li>
         </ul>
         <div class="bx bx-menu" id="menu-icon">    

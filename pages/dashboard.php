@@ -20,8 +20,8 @@
         <h1>King Meal<br>Family Restuarant</h1>
     </div>
     <a href="../index.php">Home</a>
-    <a href="../index.php">Menu</a>
-    <a href="../index.php">Contact</a>
+    <a href="../index.php#menu">Menu</a>
+    <a href="../index.php#contact">Contact</a>
     <a href="login.php">Login</a>
     <a href="register.php">Register</a>
     <a href="profile.php">Profile</a>
