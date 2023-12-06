@@ -45,8 +45,10 @@
 <section class=search>
 <!-- <div class="topnav"> -->
    
-    <div class="search-bar">
-        <input type="text" placeholder="Search...">
+    <div class="search-bar" >
+        <input type="text" placeholder="Search..." size="20">
+        <input type="search" id="mySearch" size="29">
+        
     </div>
 <!-- </div> -->
 </section>
@@ -78,7 +80,7 @@
 
 
 
-<div class="sidenav-r" style="width: 280px; height: 100%; position: fixed; top: 0; right: 0; background-color: #333; overflow-y: scroll;">
+<div class="sidenav-r" style="width: 250px; height: 100%; position: fixed; top: 0; right: 0; background-color: #333; overflow-y: scroll;">
     <div class="sidebar right" style="padding: 20px; color: #fff;">
 
 

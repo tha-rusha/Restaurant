@@ -37,12 +37,12 @@
             <div class="dropdown">
     <button class="dropbtn-">Profile</button>
         <div class="dropdown-content">
-        <a href="#">Profile</a>
+        <a href="profile.php">Profile</a>
         <a href="register.php">Register</a>
         <a href="loging.php">Login</a>
         </div>
     </div>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="../index.php#contact">Contact</a></li>
             
             <li><a href="cart.php"><i style="font-size:24px" class="fa">&#xf07a;</i></a></li>
         </ul>
