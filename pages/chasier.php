@@ -9,56 +9,6 @@
 </head>
 <body>
 
-
-
-    <style>
-    .row {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
-
-    .box {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        margin: 10px;
-    }
-</style>
-
-<div class="row">
-    <?php
-    $imagePaths = array("101.png", "102.png", "103.png", "104.png", "105.png");
-    $altTexts = array("Image 1", "Image 2", "Image 3", "Image 4", "Image 5");
-
-    for ($i = 0; $i < count($imagePaths); $i++) {
-        echo '<div class="box">';
-        echo '<img src="' . $imagePaths[$i] . '" alt="' . $altTexts[$i] . '">';
-        echo '</div>';
-    }
-    ?>
-</div>
-
-<div class="row">
-    <?php
-    $imagePaths = array("image3.jpg", "image3.jpg", "image3.jpg", "image3.jpg", "image3.jpg");
-    $altTexts = array("Image 6", "Image 7", "Image 8", "Image 9", "Image 10");
-
-    for ($i = 0; $i < count($imagePaths); $i++) {
-        echo '<div class="box">';
-        echo '<img src="' . $imagePaths[$i] . '" alt="' . $altTexts[$i] . '">';
-        echo '</div>';
-    }
-    ?>
-</div>
-
-
-
-
-
-
 <style>
         .search-bar {
             position: absolute;
@@ -118,7 +68,6 @@
 </div>
 
 <!-- Rest of your HTML code -->
-<<<<<<< Updated upstream
 <div class="menu-cards">
     <?php
         // Connect to the database and retrieve promotion items
@@ -139,13 +88,6 @@
         }
         ?>
     </div>
-=======
-<!--
-
-<div class="center" style="text-align: center;">
-    <img src="../images/101.png" width="200" height="400" alt="Pasta">
-</div>  -->
->>>>>>> Stashed changes
 
 <!-- Rest of your HTML code -->
 

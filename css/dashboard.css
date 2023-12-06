@@ -48,24 +48,6 @@ body {
     border-right: 4px solid #dda53c;
 }
 
-.box {
-    border: 2px solid hsl(33, 36%, 95%);
-    margin: 2px;
-    padding: 5px;
-    width: 100px;
-    height: 100px;
-    overflow: hidden;
-    position: relative;
-    float: left;
-}
-
-.box img {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
 
 .sidenav-r {
     height: 100%;
