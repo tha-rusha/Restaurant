@@ -46,9 +46,7 @@
 <!-- <div class="topnav"> -->
    
     <div class="search-bar" >
-        <input type="text" placeholder="Search..." size="20">
-        <input type="search" id="mySearch" size="29">
-        
+        <input type="text" placeholder="Search..." >
     </div>
 <!-- </div> -->
 </section>
