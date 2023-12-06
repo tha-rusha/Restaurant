@@ -20,19 +20,42 @@
         <h1>King Meal<br>Family Restuarant</h1>
     </div>
     <a href="../index.php">Home</a>
+<<<<<<< HEAD
+    <a href="#">Menu</a>
+    <a href="#">Contact</a>
+    <a href="#">Register</a>
+    <a href="#">Profile</a>
+    <a href="#">Dashboard</a>
+    <a href="#">Login</a>
+=======
     <a href="../index.php#menu">Menu</a>
     <a href="../index.php#contact">Contact</a>
     <a href="login.php">Login</a>
     <a href="register.php">Register</a>
     <a href="profile.php">Profile</a>
     <a href="dashboard.php" class="active">Dashboard</a>
+>>>>>>> 0410d31b4408e7587d497cbff232fab6123f9594
 </div>
 
 <div class="main">
     <div class="card-row">
         <div class="card">
             <div class="card-header">
-                <img src="icon.png" alt="Card Icon">
+                <!-- <img src="icon.png" alt="Card Icon">-->
+                <h2>Top Customer.</h2>
+            </div>
+            <div class="card-content">
+                <p>This is the content of the card.</p>
+            </div>
+            <div class="card-footer">
+                <p>Card Footer</p>
+            </div>
+        </div>
+        
+        <!-- Card 2 -->
+        <div class="card">
+            <div class="card-header">
+                <!-- <img src="icon.png" alt="Card Icon">-->
                 <h2>Top Menu Items.</h2>
             </div>
         </div>
@@ -40,6 +63,7 @@
         <!-- Add other cards here -->
         <div class="card">
             <div class="card-header">
+<<<<<<< HEAD
                 <img src="icon.png" alt="Card Icon">
                 <h2>Second Card</h2>
             </div>
@@ -49,14 +73,43 @@
             <div class="card-header">
                 <img src="icon.png" alt="Card Icon">
                 <h2>Third Card</h2>
+=======
+               <!--  <img src="../images/promo/kingmeal.png" alt="Card Icon">-->
+                <h2>Top Table.</h2>
+            </div>
+            <div class="card-content">
+                <p>This is the content of the card.</p>
+            </div>
+            <div class="card-footer">
+                <p>Card Footer</p>
+            </div>
+        </div>
+        
+        <!-- Card 4 -->
+        <div class="card">
+            <div class="card-header">
+                 <!--<img src="icon.png" alt="Card Icon">-->
+                <h2>One Person AVG Cost</h2>
+            </div>
+            <div class= "card-content">
+                <p>This is the content of the card.</p>
+            </div>
+            <div class="card-footer">
+                <p>Card Footer</p>
+>>>>>>> 43498adfab0da27329f1f3524bac9652bf0d052b
             </div>
         </div>
 
         <!-- Add more cards as needed -->
         <div class="card">
             <div class="card-header">
+<<<<<<< HEAD
                 <img src="icon.png" alt="Card Icon">
                 <h2>Third Card</h2>
+=======
+               <!--  <img src="icon.png" alt="Card Icon">-->
+                <h2>AVG processing times.</h2>
+>>>>>>> 43498adfab0da27329f1f3524bac9652bf0d052b
             </div>
         </div>
 
