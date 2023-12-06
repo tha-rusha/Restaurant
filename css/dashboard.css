@@ -48,6 +48,7 @@ body {
     border-right: 4px solid #dda53c;
 }
 
+
 .sidenav-r {
     height: 100%;
     width: 200px;
@@ -151,7 +152,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center; /* Center align the header content */
-    background-color: #af1616;
+    background-color: #2a2a2a;
     color: #fff;
     padding: 8px;
     border-top-left-radius: 4px;
@@ -163,11 +164,12 @@ body {
 }
 
 .card-footer {
-    background-color: #148f55;
+    background-color: #fc0000;
     padding: 10px;
     text-align: center;
     border-radius: 0 0 4px 4px;
 }
+
 /* CSS code */
 .modal {
     display: none;
@@ -201,7 +203,7 @@ body {
 }
 
 .close:hover {
-    color: #f00;
+    color: rgb(0, 0, 0);
 }
 
 /* You can customize the modal appearance further if needed. */

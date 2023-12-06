@@ -37,8 +37,8 @@
     <img src="images/kingmeal.png" width="140" height="100" >
     
         <ul class="navlist">
-        <li><a href="pages/chasier.php">Ca </a></li>
-        <li><a href="pages/dashboard.php" class="active">admin</a></li>
+        <li><a href="pages/chasier.php">Cashier </a></li>
+        <li><a href="pages/dashboard.php">admin</a></li>
             <li><a href="#home" class="active">Home</a></li>
             <li><a href="#menu">Menu </a></li>
             <li><a href="pages/promo.php">Promotion & Discount</a></li>
@@ -121,14 +121,55 @@
 
   <div class="column" style="background-color:#bbb;">
     <h2>Today Top Pick</h2>
-    <p>Some text..</p>
-  </div>
+    <div class="special-cards">
+                    <!-- Use server-side scripting (e.g., PHP) to fetch and display menu items here -->
+                        <?php
+                        // Connect to the database and retrieve menu items
+                        $db = new mysqli("localhost", "root", "", "hotel");
+                        $query = "SELECT * FROM todayspecial WHERE itemCode = '104'";
+                        $result = $db->query($query);
+
+                        // Loop through menu items and display them as cards
+                        while ($row = $result->fetch_assoc()) {
+                            echo '<div class="special-card">';
+                            echo '<img src="' . $row['itemImage'] . '" alt="' . $row['itemName'] . '">';
+                            echo '<h3>' . $row['itemName'] . '</h3>';
+                            echo '<p>' . $row['description'] . '</p>';
+                            echo '<p>Price: $' . $row['price'] . '</p>';
+                            echo '<a href=#" class="order-button">Order Now</a>';
+                            echo '<button class="add-to-cart-button" >Add to Cart</button>';
+                            echo '</div>';
+                        
+                        }
+                        ?>
+                    </div>
+                </div>
 
   <div class="column" style="background-color:#ccc;">
     <h2>This Month Top Pick</h2>
-    <p>Some text..</p>
-  </div>
-</div>
+    <div class="special-cards">
+                    <!-- Use server-side scripting (e.g., PHP) to fetch and display menu items here -->
+                        <?php
+                        // Connect to the database and retrieve menu items
+                        $db = new mysqli("localhost", "root", "", "hotel");
+                        $query = "SELECT * FROM todayspecial WHERE itemCode = '108'";
+                        $result = $db->query($query);
+
+                        // Loop through menu items and display them as cards
+                        while ($row = $result->fetch_assoc()) {
+                            echo '<div class="special-card">';
+                            echo '<img src="' . $row['itemImage'] . '" alt="' . $row['itemName'] . '">';
+                            echo '<h3>' . $row['itemName'] . '</h3>';
+                            echo '<p>' . $row['description'] . '</p>';
+                            echo '<p>Price: $' . $row['price'] . '</p>';
+                            echo '<a href=#" class="order-button">Order Now</a>';
+                            echo '<button class="add-to-cart-button" >Add to Cart</button>';
+                            echo '</div>';
+                        
+                        }
+                        ?>
+                    </div>
+                </div>
      
     </section>
 
