@@ -614,7 +614,7 @@ header.sticky{
     padding: 10px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
     text-align: center;
-    height: 320px;
+    
 }
 
 .special-card img {
@@ -632,7 +632,7 @@ header.sticky{
     float: left;
     width: 33.33%;
     padding: 10px;
-    height: 400px; /* Should be removed. Only for demonstration */
+    height: 450px; /* Should be removed. Only for demonstration */
   }
   
   /* Clear floats after the columns */
