@@ -94,7 +94,7 @@
 
     <div class="row">
         <div class="column" style="background-color:#aaa;">
-            <h2>Today's Special</h2>
+            <h2 style="color:aa0c0c">Today's Special</h2>
                     <div class="special-cards">
                     <!-- Use server-side scripting (e.g., PHP) to fetch and display menu items here -->
                         <?php
@@ -120,7 +120,7 @@
                 </div>
 
   <div class="column" style="background-color:#bbb;">
-    <h2>Today Top Pick</h2>
+    <h2 style="color:aa0c0c">Today Top Pick</h2>
     <div class="special-cards">
                     <!-- Use server-side scripting (e.g., PHP) to fetch and display menu items here -->
                         <?php
@@ -146,7 +146,7 @@
                 </div>
 
   <div class="column" style="background-color:#ccc;">
-    <h2>This Month Top Pick</h2>
+    <h2 style="color:aa0c0c">This Month Top Pick</h2>
     <div class="special-cards">
                     <!-- Use server-side scripting (e.g., PHP) to fetch and display menu items here -->
                         <?php
