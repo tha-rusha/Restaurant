@@ -183,7 +183,7 @@
         
         
         <div class="menu-cards">
-        <ul id="cart-items"></ul>
+     
 
             <!-- Use server-side scripting (e.g., PHP) to fetch and display menu items here -->
             <!--  Example using PHP: -->
