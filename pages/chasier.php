@@ -62,16 +62,32 @@
         <h1>King Meal<br>Family Restuarant</h1>
     </div>
     <a href="../index.php" style="margin-top: 10px;">Customer</a>
-    <a href="#" style="margin-top: 20px;">Menu</a>
+    <a href="../index.php#menu" style="margin-top: 20px;">Menu</a>
     <a href="profile.php" style="margin-top: 20px;">Profile</a>
     <a href="#" style="margin-top: 20px;">Help</a>
 </div>
 
 <!-- Rest of your HTML code -->
+<div class="menu-cards">
+    <?php
+        // Connect to the database and retrieve promotion items
+        $db = new mysqli("localhost", "root", "", "hotel");
+        $query = "SELECT * FROM menu";
+        $result = $db->query($query);
 
-<div class="center" style="text-align: center;">
-    <img src="../images/promo/101.png" width="200" height="400" alt="Pasta">
-</div>
+        // Loop through promotion items and display them as cards
+        while ($row = $result->fetch_assoc()) {
+            echo '<div class="menu-card">';
+            echo '<img src="../'. $row['itemImage'] . '" alt="' . $row['itemName'] . '">';
+            echo '<h3>' . $row['itemName'] . '</h3>';
+            echo '<p>' . $row['description'] . '</p>';
+            echo '<p>Price: $' . $row['price'] . '</p>';
+            echo '<a href=#" class="order-button">Order Now</a>';
+            echo '<button class="add-to-cart-button" >Add to Cart</button>';
+            echo '</div>';
+        }
+        ?>
+    </div>
 
 <!-- Rest of your HTML code -->
 
