@@ -20,21 +20,21 @@
 <header>
     <img src="../images/kingmeal.png" width="140" height="100" >
         <ul class="navlist">
-        <li><a href="pages/chasier.php">Ca </a></li>
-        <li><a href="pages/dashboard.php" class="active">admin</a></li>
-            <li><a href="../index.php" class="active">Home</a></li>
-            <li><a href="#menu">Menu </a></li>
-            <li><a href="#services">Promotion & Discount</a></li>
+        <li><a href="chasier.php" class="active">Cashier </a></li>
+        <li><a href="dashboard.php">admin</a></li>
+            <li><a href="../index.php">Home</a></li>
+            <li><a href="../index.php#menu">Menu </a></li>
+            <li><a href="promo.php">Promotion & Discount</a></li>
             <div class="dropdown">
   <button class="dropbtn-">Profile</button>
   <div class="dropdown-content">
-    <a href="#">Profile</a>
-    <a href="pages/register.php">Register</a>
-    <a href="pages/loging.php">Login</a>
+    <a href="profile.php">Profile</a>
+    <a href="register.php">Register</a>
+    <a href="login.php">Login</a>
   </div>
 </div>
-            <li><a href="#contact">Contact</a></li>  
-            <li><a href="pages/cart.php"><i style="font-size:24px" class="fa">&#xf07a;</i></a></li>
+            <li><a href="../index.php#contact">Contact</a></li>  
+            <li><a href="cart.php"><i style="font-size:24px" class="fa">&#xf07a;</i></a></li>
         </ul>
         <div class="bx bx-menu" id="menu-icon">    
 
@@ -45,8 +45,8 @@
 <section class=search>
 <!-- <div class="topnav"> -->
    
-    <div class="search-bar">
-        <input type="text" placeholder="Search...">
+    <div class="search-bar" >
+        <input type="text" placeholder="Search..." >
     </div>
 <!-- </div> -->
 </section>
@@ -62,23 +62,39 @@
         <h1>King Meal<br>Family Restuarant</h1>
     </div>
     <a href="../index.php" style="margin-top: 10px;">Customer</a>
-    <a href="#" style="margin-top: 20px;">Menu</a>
-    <a href="#" style="margin-top: 20px;">Profile</a>
+    <a href="../index.php#menu" style="margin-top: 20px;">Menu</a>
+    <a href="profile.php" style="margin-top: 20px;">Profile</a>
     <a href="#" style="margin-top: 20px;">Help</a>
 </div>
 
 <!-- Rest of your HTML code -->
+<div class="menu-cards">
+    <?php
+        // Connect to the database and retrieve promotion items
+        $db = new mysqli("localhost", "root", "", "hotel");
+        $query = "SELECT * FROM menu";
+        $result = $db->query($query);
 
-<div class="center" style="text-align: center;">
-    <img src="../images/promo/101.png" width="200" height="400" alt="Pasta">
-</div>
+        // Loop through promotion items and display them as cards
+        while ($row = $result->fetch_assoc()) {
+            echo '<div class="menu-card">';
+            echo '<img src="../'. $row['itemImage'] . '" alt="' . $row['itemName'] . '">';
+            echo '<h3>' . $row['itemName'] . '</h3>';
+            echo '<p>' . $row['description'] . '</p>';
+            echo '<p>Price: $' . $row['price'] . '</p>';
+            echo '<a href=#" class="order-button">Order Now</a>';
+            echo '<button class="add-to-cart-button" >Add to Cart</button>';
+            echo '</div>';
+        }
+        ?>
+    </div>
 
 <!-- Rest of your HTML code -->
 
 
 
 
-<div class="sidenav-r" style="width: 280px; height: 100%; position: fixed; top: 0; right: 0; background-color: #333; overflow-y: scroll;">
+<div class="sidenav-r" style="width: 250px; height: 100%; position: fixed; top: 0; right: 0; background-color: #333; overflow-y: scroll;">
     <div class="sidebar right" style="padding: 20px; color: #fff;">
 
 

@@ -20,12 +20,21 @@
         <h1>King Meal<br>Family Restuarant</h1>
     </div>
     <a href="../index.php">Home</a>
+<<<<<<< HEAD
     <a href="#">Menu</a>
     <a href="#">Contact</a>
     <a href="#">Register</a>
     <a href="#">Profile</a>
     <a href="#">Dashboard</a>
     <a href="#">Login</a>
+=======
+    <a href="../index.php#menu">Menu</a>
+    <a href="../index.php#contact">Contact</a>
+    <a href="login.php">Login</a>
+    <a href="register.php">Register</a>
+    <a href="profile.php">Profile</a>
+    <a href="dashboard.php" class="active">Dashboard</a>
+>>>>>>> 0410d31b4408e7587d497cbff232fab6123f9594
 </div>
 
 <div class="main">
