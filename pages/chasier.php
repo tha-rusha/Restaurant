@@ -20,21 +20,21 @@
 <header>
     <img src="../images/kingmeal.png" width="140" height="100" >
         <ul class="navlist">
-        <li><a href="pages/chasier.php">Ca </a></li>
-        <li><a href="pages/dashboard.php" class="active">admin</a></li>
-            <li><a href="../index.php" class="active">Home</a></li>
-            <li><a href="#menu">Menu </a></li>
-            <li><a href="#services">Promotion & Discount</a></li>
+        <li><a href="chasier.php" class="active">Cashier </a></li>
+        <li><a href="dashboard.php">admin</a></li>
+            <li><a href="../index.php">Home</a></li>
+            <li><a href="../index.php">Menu </a></li>
+            <li><a href="promo.php">Promotion & Discount</a></li>
             <div class="dropdown">
   <button class="dropbtn-">Profile</button>
   <div class="dropdown-content">
-    <a href="#">Profile</a>
-    <a href="pages/register.php">Register</a>
-    <a href="pages/loging.php">Login</a>
+    <a href="profile.php">Profile</a>
+    <a href="register.php">Register</a>
+    <a href="login.php">Login</a>
   </div>
 </div>
-            <li><a href="#contact">Contact</a></li>  
-            <li><a href="pages/cart.php"><i style="font-size:24px" class="fa">&#xf07a;</i></a></li>
+            <li><a href="../index.php">Contact</a></li>  
+            <li><a href="cart.php"><i style="font-size:24px" class="fa">&#xf07a;</i></a></li>
         </ul>
         <div class="bx bx-menu" id="menu-icon">    
 
@@ -63,7 +63,7 @@
     </div>
     <a href="../index.php" style="margin-top: 10px;">Customer</a>
     <a href="#" style="margin-top: 20px;">Menu</a>
-    <a href="#" style="margin-top: 20px;">Profile</a>
+    <a href="profile.php" style="margin-top: 20px;">Profile</a>
     <a href="#" style="margin-top: 20px;">Help</a>
 </div>
 
