@@ -1,7 +1,7 @@
 // Define addToCart function
-function addToCart(itemName, price) {
-    console.log(`Adding to cart: ${itemName} ${price}`);
-    const item = { name: $itemName, price: $price };
+function addToCart(itemCode, itemName, price) {
+    console.log(`Adding to cart: ${itemCode} ${itemName} ${price}`);
+    const item = { code: itemCode ,name:  itemName, price: price };
     cartItems.push(item);
     saveCartToStorage(cartItems); // Save to localStorage
     console.log('cartItems', cartItems);
@@ -24,6 +24,17 @@ function saveCartToStorage(cart) {
 function getCartFromStorage() {
     const storedCart = localStorage.getItem('cart');
     return storedCart ? JSON.parse(storedCart) : null;
+}
+
+//Remove item from cart
+function removeItemFromCart(itemCode) {
+    console.log(`Removing from cart: ${itemCode}`);
+    const index = cartItems.findIndex(item => item.code === itemCode);
+    cartItems.splice(index, 1);
+    saveCartToStorage(cartItems); // Save to localStorage
+    console.log('cartItems', cartItems);
+    // Your existing code for removing an item from the cart
+    
 }
 
 
