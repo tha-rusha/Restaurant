@@ -36,7 +36,8 @@
     
         <ul class="navlist">
             <li><a href="../index.php">Home</a></li>
-            <li><a href="../index.php">Menu </a></li>
+            <li><a href="../index.php#munu">Menu </a></li>
+
             <li><a href="promo.php" >Promotion & Discount</a></li>
             <div class="dropdown">
   <button class="dropbtn">Profile</button>
@@ -46,7 +47,8 @@
     <a href="login.php">Login</a>
   </div>
 </div>
-            <li><a href="contact.php">Contact</a></li>
+            <li><a href="../index.php#contact">Contact</a></li>
+
             <li><a href="#" class="active"><i style="font-size:24px" class="fa">&#xf07a;</i></a></li>
         </ul>
 

@@ -42,7 +42,8 @@
         <a href="login.php">Login</a>
         </div>
     </div>
-            <li><a href="../index.php">Contact</a></li>
+            <li><a href="../index.php#contact">Contact</a></li>
+
             
             <li><a href="cart.php"><i style="font-size:24px" class="fa">&#xf07a;</i></a></li>
         </ul>
