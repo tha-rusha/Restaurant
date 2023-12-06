@@ -22,10 +22,10 @@
     <a href="../index.php">Home</a>
     <a href="#">Menu</a>
     <a href="#">Contact</a>
-    <a href="#">Login</a>
     <a href="#">Register</a>
     <a href="#">Profile</a>
     <a href="#">Dashboard</a>
+    <a href="#">Login</a>
 </div>
 
 <div class="main">
@@ -33,7 +33,21 @@
         <!-- Card 1 -->
         <div class="card">
             <div class="card-header">
-                <img src="icon.png" alt="Card Icon">
+                <!-- <img src="icon.png" alt="Card Icon">-->
+                <h2>Top Customer.</h2>
+            </div>
+            <div class="card-content">
+                <p>This is the content of the card.</p>
+            </div>
+            <div class="card-footer">
+                <p>Card Footer</p>
+            </div>
+        </div>
+        
+        <!-- Card 2 -->
+        <div class="card">
+            <div class="card-header">
+                <!-- <img src="icon.png" alt="Card Icon">-->
                 <h2>Top Menu Items.</h2>
             </div>
             <div class="card-content">
@@ -47,22 +61,8 @@
         <!-- Card 2 -->
         <div class="card">
             <div class="card-header">
-                <img src="icon.png" alt="Card Icon">
-                <h2>Top Menu Items.</h2>
-            </div>
-            <div class="card-content">
-                <p>This is the content of the card.</p>
-            </div>
-            <div class="card-footer">
-                <p>Card Footer</p>
-            </div>
-        </div>
-        
-        <!-- Card 2 -->
-        <div class="card">
-            <div class="card-header">
-                <img src="../images/promo/kingmeal.png" alt="Card Icon">
-                <h2>Top Menu Items.</h2>
+               <!--  <img src="../images/promo/kingmeal.png" alt="Card Icon">-->
+                <h2>Top Table.</h2>
             </div>
             <div class="card-content">
                 <p>This is the content of the card.</p>
@@ -75,7 +75,7 @@
         <!-- Card 4 -->
         <div class="card">
             <div class="card-header">
-                <img src="icon.png" alt="Card Icon">
+                 <!--<img src="icon.png" alt="Card Icon">-->
                 <h2>One Person AVG Cost</h2>
             </div>
             <div class= "card-content">
@@ -89,8 +89,8 @@
         <!-- Card 2 -->
         <div class="card">
             <div class="card-header">
-                <img src="icon.png" alt="Card Icon">
-                <h2>Top Menu Items.</h2>
+               <!--  <img src="icon.png" alt="Card Icon">-->
+                <h2>AVG processing times.</h2>
             </div>
             <div class="card-content">
                 <p>This is the content of the card.</p>
