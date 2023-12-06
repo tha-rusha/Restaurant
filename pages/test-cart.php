@@ -62,6 +62,26 @@
     </div>
     
     
+<!-- Display items in the cart -->
+<div class="cart-item">
+    <h3>Item Name</h3>
+    <p>Price: $10.00</p>
+    <p>Quantity: document.getElementById("itemId");</p>
+    <input type="number" value="1" min="1" max="10">
+    <button onclick="updateCartItem('itemID', 1)">Update</button>
+    <button onclick="removeCartItem('itemID')">Remove</button>
+</div>
+
+<!-- JavaScript to handle updating and removing items from the cart -->
+<script>
+    function updateCartItem(itemId, quantity) {
+        // Implement the logic to update the item quantity in the cart
+    }
+
+    function removeCartItem(itemId) {
+        // Implement the logic to remove the item from the cart
+    }
+</script>
 
 
     
