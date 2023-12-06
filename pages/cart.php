@@ -83,7 +83,7 @@
                     listItem.innerHTML = `
                         <div>
                             <p>${item.name}</p>
-                            <p>Price: $${item.price.toFixed(2)}</p>
+                            <p>Price: $${item.price}</p>
                         </div>
                         <button onclick="removeItem('${item.code}')">Remove</button>
                     `;
@@ -96,7 +96,7 @@
 
             // Calculate and display the total price
             const total = cartItems.reduce((acc, item) => acc + item.price, 0);
-            cartTotal.textContent = total.toFixed(2);
+            cartTotal.textContent = total;
         });
 
         function getCartFromStorage() {

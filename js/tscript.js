@@ -1,7 +1,7 @@
 // Define addToCart function
 function addToCart(itemName, price) {
     console.log(`Adding to cart: ${itemName} ${price}`);
-    const item = { name: itemName, price: price };
+    const item = { name: $itemName, price: $price };
     cartItems.push(item);
     saveCartToStorage(cartItems); // Save to localStorage
     console.log('cartItems', cartItems);

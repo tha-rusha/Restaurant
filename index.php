@@ -166,7 +166,7 @@
                     $itemCode = $row['itemCode'];
                     $itemName = $row['itemName'];
                     $price = $row['price'];
-                    echo '<button class="add-to-cart-button" onclick="addToCart(\'Sunil\',12.50)">Add to Cart</button>';
+                    echo '<button class="add-to-cart-button" onclick="addToCart(\'' . $itemCode . '\', \'' . $itemName . '\', \'' . $price . '\')">Add to Cart</button>';
                     echo '</div>';
                 }
             ?>
