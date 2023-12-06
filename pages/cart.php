@@ -1,85 +1,129 @@
-
-
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>King Meal Restuarant </title>
-    <!-- <link rel="icon" href="images/title.png" type="image/gif" sizes="18x18"> -->
-    <link rel="icon" type="image/x-icon" href="images/title.png" sizes="22x22">
-    <!-- custom css link -->
-    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <!-- Add your CSS styles here -->
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
 
-    <link rel="stylesheet"
-    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+        }
 
-    <!-- fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    
-    <!-- fonts end -->
-    <!-- Multiple font families -->
-    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+        #cart-container {
+            width: 80%;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
 
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> -->
-  
-    </head>
-    <body>
+        li {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+        }
 
-    <!-- header section -->
-    <header>
-    <img src="../images/kingmeal.png" width="140" height="100" >
-    
-        <ul class="navlist">
-            <li><a href="../index.php">Home</a></li>
-            <li><a href="../index.php#munu">Menu </a></li>
-            <li><a href="promo.php" >Promotion & Discount</a></li>
-            <div class="dropdown">
-  <button class="dropbtn">Profile</button>
-  <div class="dropdown-content">
-    <a href="profile.php">Profile</a>
-    <a href="register.php">Register</a>
-    <a href="login.php">Login</a>
-  </div>
-</div>
-            <li><a href="../index.php#contact">Contact</a></li>
-            <li><a href="#" class="active"><i style="font-size:24px" class="fa">&#xf07a;</i></a></li>
-        </ul>
+        p {
+            font-size: 18px;
+        }
 
-    
-        <div class="bx bx-menu" id="menu-icon">
-            
-    </header>
+        #cart-total {
+            font-size: 20px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
 
-    <!-- promotion and discount section -->
-<section class="services" id="services">
-    <div class="main-text">
-        <h2>Cart <span>Items</span></h2>
+    <h1>Shopping Cart</h1>
+
+    <div id="cart-container">
+        <!-- Cart items will be displayed here dynamically -->
     </div>
-    
-    
 
+    <p>Total: $<span id="cart-total">0.00</span></p>
 
-    
-    </div>
-    </section>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Retrieve cartItems from localStorage
+            const cartItems = getCartFromStorage() || [];
 
-    <!-- end section
-    <section class="end">
-        <div class="last-text">
-        <p style="text-align: center;"> © COPYRIGHT 2023 | KING MEAL FAMILY RESTUARANT | ALL RIGHTS RESERVED.</p>
-        </div>
-        
+            // Display cart items on the cart.php page
+            const cartContainer = document.getElementById('cart-container');
+            const cartTotal = document.getElementById('cart-total');
 
-    </section> -->
-      
-    <!-- custom js link -->
-    <script type="text/javascript" src="../js/script.js"></script> 
+            // Check if the cart is empty
+            if (cartItems.length === 0) {
+                const emptyCartMessage = document.createElement('p');
+                emptyCartMessage.textContent = 'Your cart is empty.';
+                cartContainer.appendChild(emptyCartMessage);
+            } else {
+                // Create an unordered list for cart items
+                const cartList = document.createElement('ul');
 
-    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>      -->
-    </body>
+                // Iterate through each item in the cart
+                cartItems.forEach(item => {
+                    const listItem = document.createElement('li');
+                    listItem.innerHTML = `
+                        <div>
+                            <p>${item.name}</p>
+                            <p>Price: $${item.price.toFixed(2)}</p>
+                        </div>
+                        <button onclick="removeItem('${item.code}')">Remove</button>
+                    `;
+                    cartList.appendChild(listItem);
+                });
+
+                // Append the cart list to the container
+                cartContainer.appendChild(cartList);
+            }
+
+            // Calculate and display the total price
+            const total = cartItems.reduce((acc, item) => acc + item.price, 0);
+            cartTotal.textContent = total.toFixed(2);
+        });
+
+        function getCartFromStorage() {
+            // Retrieve cartItems from localStorage
+            const cartItems = localStorage.getItem('cart');
+
+            // Convert cartItems from JSON to JavaScript object
+            const cartItemsObj = JSON.parse(cartItems);
+
+            // Return cartItemsObj
+            return cartItemsObj;
+        }
+
+        function removeItem(itemCode) {
+            // Retrieve cartItems from localStorage
+            let cartItems = getCartFromStorage() || [];
+
+            // Remove the item with the specified code from the cart
+            cartItems = cartItems.filter(item => item.code !== itemCode);
+
+            // Save the updated cartItems to localStorage
+            localStorage.setItem('cart', JSON.stringify(cartItems));
+
+            // Reload the page to reflect the changes
+            location.reload();
+        }
+    </script>
+
+</body>
 </html>

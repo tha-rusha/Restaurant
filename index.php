@@ -27,6 +27,8 @@
 
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> -->
   
+    <script type="text/javascript" src="js/tscript.js"></script> 
+
     </head>
     <body>
 
@@ -140,6 +142,8 @@
         
         
         <div class="menu-cards">
+        <ul id="cart-items"></ul>
+
             <!-- Use server-side scripting (e.g., PHP) to fetch and display menu items here -->
             <!--  Example using PHP: -->
             <?php
@@ -162,7 +166,7 @@
                     $itemCode = $row['itemCode'];
                     $itemName = $row['itemName'];
                     $price = $row['price'];
-                    echo '<button class="add-to-cart-button" onclick="testFunc(\'' . $itemCode . '\', \'' . $itemName . '\', \'' . $price . '\')">Add to Cart</button>';
+                    echo '<button class="add-to-cart-button" onclick="addToCart(\'Sunil\',12.50)">Add to Cart</button>';
                     echo '</div>';
                 }
             ?>
@@ -228,6 +232,8 @@
       
     <!-- custom js link -->
     <script type="text/javascript" src="js/script.js"></script> 
+    <!-- <script type="text/javascript" src="js/tscript.js"></script>  -->
+
 
     <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>      -->
     <script>

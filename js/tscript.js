@@ -1,26 +1,30 @@
-let cartItems = [];
-
-function addToCart(itemName, itemPrice) {
-    const item = { name: itemName, price: itemPrice };
+// Define addToCart function
+function addToCart(itemName, price) {
+    console.log(`Adding to cart: ${itemName} ${price}`);
+    const item = { name: itemName, price: price };
     cartItems.push(item);
-    updateCart();
+    saveCartToStorage(cartItems); // Save to localStorage
+    console.log('cartItems', cartItems);
 }
 
+// Define updateCart function
 function updateCart() {
-    const cartList = document.getElementById('cart-items');
-    const cartTotal = document.getElementById('cart-total');
-    
-    // Clear the existing cart items
-    cartList.innerHTML = '';
-
-    // Display the updated cart items
-    cartItems.forEach(item => {
-        const listItem = document.createElement('li');
-        listItem.textContent = `${item.name} - $${item.price.toFixed(2)}`;
-        cartList.appendChild(listItem);
-    });
-
-    // Calculate and display the total price
-    const total = cartItems.reduce((acc, item) => acc + item.price, 0);
-    cartTotal.textContent = total.toFixed(2);
+    // Your existing code for updating the cart
 }
+
+// Retrieve cartItems from localStorage on page load
+let cartItems = getCartFromStorage() || [];
+
+// Save cartItems to localStorage
+function saveCartToStorage(cart) {
+    localStorage.setItem('cart', JSON.stringify(cart));
+}
+
+// Retrieve cartItems from localStorage
+function getCartFromStorage() {
+    const storedCart = localStorage.getItem('cart');
+    return storedCart ? JSON.parse(storedCart) : null;
+}
+
+
+
