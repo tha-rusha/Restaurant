@@ -6,6 +6,19 @@
     <link rel="stylesheet" type="text/css" href="../css/dashboard.css">
     <script src="../js/dashboard.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+    .search-bar {
+        padding: 10px; /* Adjust the padding as needed */
+    }
+
+    .search-bar input {
+        /* Optionally, add more styling to the input field */
+        padding: 8px;
+        width: 200px; /* Adjust the width as needed */
+        box-sizing: border-box; /* Include padding and border in the total width/height */
+    }
+</style>
 </head>
 <body>
 
@@ -42,14 +55,10 @@
         
     </header>
 <br>
-<section class=search>
-<!-- <div class="topnav"> -->
-   
-    <div class="search-bar" >
-        <input type="text" placeholder="Search..." >
-    </div>
-<!-- </div> -->
-</section>
+
+<div class="search-bar" style="padding-right: 250px;">
+    <input type="text" placeholder="Search..." style="padding: 8px; width: 200px; box-sizing: border-box;">
+</div>
 
 
 <a href="dashboard.php" style="display: inline-block; padding: 10px 20px; background-color: #0077FF; color: #FFFFFF; text-align: center; text-decoration: none; border: 2px solid #0077FF; border-radius: 5px;">
@@ -67,27 +76,49 @@
     <a href="#" style="margin-top: 20px;">Help</a>
 </div>
 
-<!-- Rest of your HTML code -->
-<div class="menu-cards">
-    <?php
-        // Connect to the database and retrieve promotion items
-        $db = new mysqli("localhost", "root", "", "hotel");
-        $query = "SELECT * FROM menu";
-        $result = $db->query($query);
+</section>
+<section class="menu" id="menu">
+   <main>
+   <div class="main-text"> 
+       <h2>Foods <span>Menu</span></h2>
+   </div>
+   
+   
+   <div class="menu-cards">
 
-        // Loop through promotion items and display them as cards
-        while ($row = $result->fetch_assoc()) {
-            echo '<div class="menu-card">';
-            echo '<img src="../'. $row['itemImage'] . '" alt="' . $row['itemName'] . '">';
-            echo '<h3>' . $row['itemName'] . '</h3>';
-            echo '<p>' . $row['description'] . '</p>';
-            echo '<p>Price: $' . $row['price'] . '</p>';
-            echo '<a href=#" class="order-button">Order Now</a>';
-            echo '<button class="add-to-cart-button" >Add to Cart</button>';
-            echo '</div>';
-        }
-        ?>
-    </div>
+
+       <!-- Use server-side scripting (e.g., PHP) to fetch and display menu items here -->
+       <!--  Example using PHP: -->
+       <?php
+           // Connect to the database and retrieve menu items
+           $db = new mysqli("localhost", "root", "", "hotel");
+           $query = "SELECT * FROM menu";
+           $result = $db->query($query);
+
+         
+
+           // Loop through menu items and display them as cards
+           while ($row = $result->fetch_assoc()) {
+               echo '<div class="menu-card">';
+               echo '<img src="../' . $row['itemImage'] . '" alt="' . $row['itemName'] . '">';
+               echo '<h3>' . $row['itemName'] . '</h3>';
+               echo '<p>' . $row['description'] . '</p>';
+               echo '<p>Price: $' . $row['price'] . '</p>';
+               // Add the "Order Now" button with a link
+               echo '<a href=#" class="order-button">Order Now</a>';
+               $itemCode = $row['itemCode'];
+               $itemName = $row['itemName'];
+               $price = $row['price'];
+               echo '<button class="add-to-cart-button" onclick="addToCart(\'' . $itemCode . '\', \'' . $itemName . '\', \'' . $price . '\')">Add to Cart</button>';
+               echo '</div>';
+           }
+       ?>
+       <!-- -->
+   </div>
+   </div>
+</main>
+
+</section> 
 
 <!-- Rest of your HTML code -->
 
