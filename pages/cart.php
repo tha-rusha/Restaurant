@@ -73,12 +73,17 @@
 
     <div id="cart-container">
         <!-- Cart items will be displayed here dynamically -->
+     
     </div>
 
     <p>Total: $<span id="cart-total">0.00</span></p>
     
+    <button onClick="clearCart()"> Clear Cart</button>
 
     <script>
+
+
+const cartTotalElement = document.getElementById('cart-total');
         document.addEventListener('DOMContentLoaded', function() {
             // Retrieve cartItems from localStorage
             const cartItems = getCartFromStorage() || [];
@@ -101,8 +106,11 @@
                     const listItem = document.createElement('li');
                     listItem.innerHTML = `
                         <div style="border-bottom: 1px solid #ddd">
-                            <p>Item Code: ${item.name}</p>
-                            <p>Item Name: ${item.price}</p>
+                            <p>${item.name}</p>
+                           
+                        </div>
+                        <div>
+                            <p>$${item.price}</p>
                         </div>
                         <button onclick="removeItemFromCart('${item.name}, ${item.price}')">Remove</button>
                     `;
@@ -114,8 +122,13 @@
             }
 
             // Calculate and display the total price
-            const total = cartItems.reduce((acc, item) => acc + item.price, 0);
-            cartTotal.textContent = total;
+            // const total = cartItems.reduce((acc, item) => acc + item.price, 0);
+            // cartTotal.textContent = total;
+
+            const totalPrice = calculateTotal(cartItems);
+console.log('Total Price: $' + totalPrice);
+// Display the total price
+cartTotalElement.innerHTML = totalPrice;
         });
 
         function getCartFromStorage() {
@@ -142,6 +155,24 @@
             // Reload the page to reflect the changes
             location.reload();
         }
+
+        function clearCart() {
+        // Clear the cart by removing all items from localStorage
+      
+        localStorage.removeItem('cart');
+
+        // Reload the page to reflect the changes
+        location.reload();
+    }
+
+    function calculateTotal(cartItems) {
+  // Calculate the total price of cart items
+  const total = cartItems.reduce((acc, item) => acc + parseFloat(item.price), 0);
+  return total.toFixed(2); // Format total to two decimal places
+}
+
+// Calculate and display the total price
+
     </script>
     
     <!-- end section -->

@@ -26,6 +26,7 @@
                 <label for="telephone">Telephone</label>
                 <input type="text" id="telephone" name="telephone" required>
             </div>
+           
             <div class="form-group">
                 <label for="password">Password</label>
                 <input type="password" id="password" name="password" required>
@@ -34,8 +35,9 @@
                 <label for="confirm-password">Confirm Password</label>
                 <input type="password" id="confirm-password" name="confirm-password" required>
             </div>
-            <button type="submit" >Register</button>
+            <button type="submit">Register</button>
         </form>
     </div>
 </body>
 </html>
+

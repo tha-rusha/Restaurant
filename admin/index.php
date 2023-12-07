@@ -18,8 +18,8 @@ if (isset($_SESSION['message'])) {
 </head>
 <body>
     <div class="container">
-        <form id="login-form" action="loginAction.php" method="POST">
-            <h2>Login for an Account</h2>
+        <form id="login-form" action="dashboard.php" method="POST">
+            <h2>Admin Login</h2>
             <?php
                 if (isset($message)) {
                     echo "<p class='message'>$message</p>";

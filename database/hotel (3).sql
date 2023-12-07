@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 22, 2023 at 07:59 PM
--- Server version: 10.4.28-MariaDB
--- PHP Version: 8.2.4
+-- Generation Time: Dec 07, 2023 at 09:46 AM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -117,6 +117,7 @@ CREATE TABLE `customer` (
   `tpNumber` int(10) NOT NULL,
   `address` varchar(50) NOT NULL,
   `email` varchar(50) NOT NULL,
+  `Role` varchar(15) NOT NULL,
   `password` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -124,14 +125,16 @@ CREATE TABLE `customer` (
 -- Dumping data for table `customer`
 --
 
-INSERT INTO `customer` (`id`, `customerId`, `customerName`, `tpNumber`, `address`, `email`, `password`) VALUES
-(1, 0, 'Tharusha', 761234567, 'Pitipana, Homagama', 'tharusha@gmail.com', '21232f297a57a5a743894a0e4a801fc3'),
-(2, 0, 'Tharusha Dilhara', 712323232, 'Homagama, Colombo', 'tharusha1234@gmail.com', '81dc9bdb52d04dc20036dbd8313ed055'),
-(3, 0, 'Sanduni Upekha', 701234567, 'Abc lane, Colombo', 'sanduni1234@gmail.com', 'e2fc714c4727ee9395f324cd2e7f331f'),
-(4, 0, 'Sanduni', 372222222, 'Galgamuwa, Kurunegala', 'sanduni@gmail.com', 'a01610228fe998f515a72dd730294d87'),
-(5, 0, 'Jayani Malshika', 751212121, 'Godagama, Homagama', 'jayani@gmail.com', 'b59c67bf196a4758191e42f76670ceba'),
-(8, 0, 'abcd', 111234123, 'Colombo', 'abcd@gmail.com', '749d7048edd2de31c2c7a88d4d196254'),
-(9, 0, 'reahal', 127589365, 'gampaha', 'rahal@gmail.com', '1a1dc91c907325c69271ddf0c944bc72');
+INSERT INTO `customer` (`id`, `customerId`, `customerName`, `tpNumber`, `address`, `email`, `Role`, `password`) VALUES
+(1, 0, 'Tharusha', 761234567, 'Pitipana, Homagama', 'tharusha@gmail.com', 'Customer', '21232f297a57a5a743894a0e4a801fc3'),
+(2, 0, 'Tharusha Dilhara', 712323232, 'Homagama, Colombo', 'tharusha1234@gmail.com', 'Customer', '81dc9bdb52d04dc20036dbd8313ed055'),
+(3, 0, 'Sanduni Upekha', 701234567, 'Abc lane, Colombo', 'sanduni1234@gmail.com', 'Admin', 'e2fc714c4727ee9395f324cd2e7f331f'),
+(4, 0, 'Sanduni', 372222222, 'Galgamuwa, Kurunegala', 'sanduni@gmail.com', 'Cashier', 'a01610228fe998f515a72dd730294d87'),
+(5, 0, 'Jayani Malshika', 751212121, 'Godagama, Homagama', 'jayani@gmail.com', 'Staff', 'b59c67bf196a4758191e42f76670ceba'),
+(8, 0, 'abcd', 111234123, 'Colombo', 'abcd@gmail.com', 'Cashier', '749d7048edd2de31c2c7a88d4d196254'),
+(9, 0, 'reahal', 127589365, 'gampaha', 'rahal@gmail.com', 'Admin', '1a1dc91c907325c69271ddf0c944bc72'),
+(10, 0, 'chanuka gayantha', 701234567, 'Dampe, Pitipana, Homagama', 'chanuka12@gmail.com', 'Admin', '21232f297a57a5a743894a0e4a801fc3'),
+(11, 0, 'admin', 123456792, 'Ankumbura, Kandy Sri lanka', 'admin@gmail.com', 'Staff', '21232f297a57a5a743894a0e4a801fc3');
 
 --
 -- Triggers `customer`
@@ -190,7 +193,10 @@ CREATE TABLE `email_outbox` (
 
 INSERT INTO `email_outbox` (`id`, `subject`, `message`, `created_time`) VALUES
 (1, 'Feedback', 'New feedback received', '2023-10-22 12:14:06'),
-(2, 'Customer', 'New customer registered', '2023-10-22 12:19:49');
+(2, 'Customer', 'New customer registered', '2023-10-22 12:19:49'),
+(3, 'Customer', 'New customer registered', '2023-10-24 04:06:50'),
+(4, 'Customer', 'New customer registered', '2023-12-04 14:52:28'),
+(5, 'Feedback', 'New feedback received', '2023-12-05 14:42:04');
 
 -- --------------------------------------------------------
 
@@ -231,7 +237,8 @@ INSERT INTO `feedback` (`id`, `name`, `tpNumber`, `email`, `message`) VALUES
 (19, 'Rehan', 772556486, 'rehanz@gmail.com', 'The specials or promotions offered provided excellent value for the quality of food and service.'),
 (20, 'Dilani', 772456823, 'dilani65@gmail.com', ' The cleanliness of the restrooms was appreciated, contributing to an overall positive dining experience.'),
 (21, 'Senuri ', 754136825, 'senuri24@gmail.com', 'The noise level was manageable, allowing for conversation without being too loud or disruptive.'),
-(22, 'Tharusha Dilhara', 701234567, 'tharu123@gmail.com', 'trigger');
+(22, 'Tharusha Dilhara', 701234567, 'tharu123@gmail.com', 'trigger'),
+(23, 'Kalana', 1122222222, 'kalana@gmail.com', 'help');
 
 --
 -- Triggers `feedback`
@@ -627,7 +634,7 @@ ALTER TABLE `cashier`
 -- AUTO_INCREMENT for table `customer`
 --
 ALTER TABLE `customer`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `delivery`
@@ -639,13 +646,13 @@ ALTER TABLE `delivery`
 -- AUTO_INCREMENT for table `email_outbox`
 --
 ALTER TABLE `email_outbox`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `feedback`
 --
 ALTER TABLE `feedback`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT for table `menu`

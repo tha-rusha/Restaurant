@@ -24,10 +24,13 @@
         <a href="../index.php">Home</a>
         <a href="../index.php#menu">Menu</a>
         <a href="../index.php#contact">Contact</a>
+        <a href="chasier.php" >Cashier</a>
+        <a href="kitchen.php" >kitchen</a>
+
+
         <a href="login.php">Login</a>
         <a href="register.php">Register</a>
         <a href="profile.php">Profile</a>
-        <a href="dashboard.php" class="active">Dashboard</a>
     </div>
 
     <div class="main">
