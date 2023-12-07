@@ -37,17 +37,17 @@
         <li><a href="dashboard.php">Admin</a></li>
             <li><a href="../index.php">Home</a></li>
             <li><a href="../index.php#menu">Menu </a></li>
-            <li><a href="promo.php">Promotion & Discount</a></li>
+            <li><a href="../pages/promo.php">Promotion & Discount</a></li>
             <div class="dropdown">
   <button class="dropbtn-">Profile</button>
   <div class="dropdown-content">
-    <a href="profile.php">Profile</a>
-    <a href="register.php">Register</a>
-    <a href="login.php">Login</a>
+    <a href="../pages/profile.php">Profile</a>
+    <a href="../pages/register.php">Register</a>
+    <a href="index.php">Login</a>
   </div>
 </div>
             <li><a href="../index.php#contact">Contact</a></li>  
-            <li><a href="cart.php"><i style="font-size:24px" class="fa">&#xf07a;</i></a></li>
+            <li><a href="../pages/cart.php"><i style="font-size:24px" class="fa">&#xf07a;</i></a></li>
         </ul>
         <div class="bx bx-menu" id="menu-icon">    
 
@@ -73,7 +73,7 @@
     <a href="../index.php" style="margin-top: 10px;">Customer</a>
     <a href="kitchen.php" style="margin-top: 10px;">Kitchen</a>
     <a href="../index.php#menu" style="margin-top: 20px;">Menu</a>
-    <a href="profile.php" style="margin-top: 20px;">Profile</a>
+    <a href="../pages/profile.php" style="margin-top: 20px;">Profile</a>
     <a href="#" style="margin-top: 20px;">Help</a>
 </div>
 
