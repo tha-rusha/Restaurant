@@ -1,36 +1,42 @@
-// JavaScript code
-function loadDatabaseTables() {
-    // This is a placeholder function to load database tables.
-    // You can replace it with your actual code to fetch and display the tables.
 
-    // For demonstration purposes, let's assume we have some table names.
-    const tableNames = ["Table 1", "Table 2", "Table 3", "Table 4"];
+// Function to fetch and display data in the modal/container
+function displayDetails(cardId) {
+    // You'd typically use AJAX/fetch to retrieve data from the server/database
+    // Simulating data fetching for demonstration purposes
+    // Replace this with your actual data retrieval logic
+    const data = fetchDataFromDatabase(cardId);
 
-    const tableDataElement = document.getElementById("table-data");
-    tableDataElement.innerHTML = ""; // Clear previous data
+    // Display the fetched data in the modal/container
+    const tableDataDiv = document.getElementById('table-data');
+    // Assuming 'data' contains the HTML content for the details
+    tableDataDiv.innerHTML = data;
 
-    for (const tableName of tableNames) {
-        const tableItem = document.createElement("p");
-        tableItem.textContent = tableName;
-        tableDataElement.appendChild(tableItem);
-    }
-
-    openModal(); // Display the modal
+    // Show the modal/container
+    document.getElementById('myModal').style.display = 'block';
 }
 
-function openModal() {
-    const modal = document.getElementById("myModal");
-    modal.style.display = "block";
-}
+// Function to handle card click
+document.addEventListener('DOMContentLoaded', function () {
+    const cards = document.querySelectorAll('.card');
 
-function closeModal() {
-    const modal = document.getElementById("myModal");
-    modal.style.display = "none";
-}
+    cards.forEach(card => {
+        card.addEventListener('click', function () {
+            const cardId = this.getAttribute('data-card-id');
+            displayDetails(cardId);
+        });
+    });
+});
 
-window.onclick = function (event) {
-    const modal = document.getElementById("myModal");
-    if (event.target === modal) {
-        modal.style.display = "none";
-    }
-};
+// Function to simulate fetching data from the database
+function fetchDataFromDatabase(cardId) {
+    // This function should make an AJAX/fetch call to your server/database
+    // Here, just an example with static data for demonstration
+    const cardData = {
+        1: '<p>Details for card 1</p>',
+        2: '<p>Details for card 2</p>',
+        // Add more data as needed for each card ID
+    };
+
+    // Return the simulated data for the given cardId
+    return cardData[cardId];
+}
