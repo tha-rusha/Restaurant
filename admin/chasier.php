@@ -34,7 +34,7 @@
     <img src="../images/kingmeal.png" width="140" height="100" >
         <ul class="navlist">
         <li><a href="chasier.php" class="active">Cashier </a></li>
-        <li><a href="dashboard.php">admin</a></li>
+        <li><a href="dashboard.php">Admin</a></li>
             <li><a href="../index.php">Home</a></li>
             <li><a href="../index.php#menu">Menu </a></li>
             <li><a href="promo.php">Promotion & Discount</a></li>
