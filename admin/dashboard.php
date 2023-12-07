@@ -35,17 +35,16 @@
         }
 
         :root{
-    --card-color: #0c2040;
-    --bg-color: #2a2a2a;
-    --second-color: #202020;
-    --text-color: #2a2a2a;
-    --second-color: #ccc;
-    --main-color: #dda53c;
-    --big-font: 5rem;
-    --h2-font: 3rem;
-    --p-font: 1.1rem;
-    
-}
+            --card-color: #0c2040;
+            --bg-color: #2a2a2a;
+            --second-color: #202020;
+            --text-color: #2a2a2a;
+            --second-color: #ccc;
+            --main-color: #dda53c;
+            --big-font: 5rem;
+            --h2-font: 3rem;
+            --p-font: 1.1rem;
+        }
     </style>
 </head>
 
@@ -69,7 +68,6 @@
         <a href="chasier.php" >Cashier</a>
         <a href="kitchen.php" >Kitchen</a>
 
-
         <a href="index.php">Login</a>
         <a href="../pages/register.php">Register</a>
         <a href="../pages/profile.php">Profile</a>
@@ -77,143 +75,146 @@
 
     <div class="main">
 
-    <section class="special" id="special">
-        <div class="main-text"> 
-            <h2 style="color:#fff">Today <span>Special</span></h2>
-        </div>
-        <div class="card-col">
+        <section class="special" id="special">
+            <div class="main-text"> 
+                <h2 style="color:#fff">Today <span>Special</span></h2>
+            </div>
+            <div class="card-col">
 
-        <?php
+                <?php
                 // Connect to the database and retrieve menu items
                 $db = new mysqli("localhost", "root", "", "hotel");
                 $query = "SELECT * FROM todayspecial";
                 $result = $db->query($query);
 
-              
-// Check if there are rows in the result
-if ($result->num_rows > 0) {
-    // Display the data in a table
-    echo '<table border="1">';
-    echo '<tr>
-            <th>Item Code</th>
-            <th>Item Name</th>
-            <th>Price</th>
-            <th>Description</th>
-        </tr>';
+                // Check if there are rows in the result
+                if ($result->num_rows > 0) {
+                    // Display the data in a table
+                    echo '<table border="1">';
+                    echo '<tr>
+                            <th>Item Code</th>
+                            <th>Item Name</th>
+                            <th>Price</th>
+                            <th>Description</th>
+                        </tr>';
 
-    while ($row = $result->fetch_assoc()) {
-        echo '<tr>';
-        echo '<td>' . $row['itemName'] . '</td>';
-        echo '<td>' . $row['itemCode'] . '</td>';
-        echo '<td>' . $row['price'] . '</td>';
-        echo '<td>' . $row['description'] . '</td>';
-        echo '</tr>';
-    }
+                    while ($row = $result->fetch_assoc()) {
+                        echo '<tr>';
+                        echo '<td>' . $row['itemName'] . '</td>';
+                        echo '<td>' . $row['itemCode'] . '</td>';
+                        echo '<td>' . $row['price'] . '</td>';
+                        echo '<td>' . $row['description'] . '</td>';
+                        echo '</tr>';
+                    }
 
-    echo '</table>';
-} else {
-    // No data found
-    echo 'No data found.';
-}
-
-// Close the database connection
-$db->close();
-?>
-           
-           <div class="special" id="special">
-        <div class="main-text"> 
-            <h2 style="color:#fff">Top <span>Customer</span></h2>
-        </div>
-        <div class="card-row">
-
-        <?php
-            // Connect to the database and retrieve customer items
-            $db = new mysqli("localhost", "root", "", "hotel");
-            $query = "SELECT * FROM customer";
-            $result = $db->query($query);
-
-            // Check if there are rows in the result
-            if ($result->num_rows > 0) {
-                // Display the data in a table
-                echo '<table>';
-                echo '<tr>
-                        <th>Customer Name</th>
-                        <th>Mobile Number</th>
-                        <th>Address</th>
-                        <th>Email</th>
-                    </tr>';
-
-                while ($row = $result->fetch_assoc()) {
-                    echo '<tr>';
-                    echo '<td>' . $row['customerName'] . '</td>';
-                    echo '<td>' . $row['tpNumber'] . '</td>';
-                    echo '<td>' . $row['address'] . '</td>';
-                    echo '<td>' . $row['email'] . '</td>';
-                    echo '</tr>';
+                    echo '</table>';
+                } else {
+                    // No data found
+                    echo 'No data found.';
                 }
 
-                echo '</table>';
-            } else {
-                // No data found
-                echo 'No data found.';
-            }
+                // Close the database connection
+                $db->close();
+                ?>
 
-            // Close the database connection
-            $db->close();
-        ?>
-        </div>
-        
+            </div>
+        </section>
 
+        <div class="special" id="special">
+            <div class="main-text" style="margin-top: 20px;"> <!-- Adjust margin-top value as needed -->
+                <h2 style="color:#fff">Top <span>Customer</span></h2>
+            </div>
+            <div class="card-row">
 
-           
+                <?php
+                // Connect to the database and retrieve customer items
+                $db = new mysqli("localhost", "root", "", "hotel");
+                $query = "SELECT * FROM customer";
+                $result = $db->query($query);
+
+                // Check if there are rows in the result
+                if ($result->num_rows > 0) {
+                    // Display the data in a table
+                    echo '<table>';
+                    echo '<tr>
+                            <th>Customer Name</th>
+                            <th>Mobile Number</th>
+                            <th>Address</th>
+                            <th>Email</th>
+                        </tr>';
+
+                    while ($row = $result->fetch_assoc()) {
+                        echo '<tr>';
+                        echo '<td>' . $row['customerName'] . '</td>';
+                        echo '<td>' . $row['tpNumber'] . '</td>';
+                        echo '<td>' . $row['address'] . '</td>';
+                        echo '<td>' . $row['email'] . '</td>';
+                        echo '</tr>';
+                    }
+
+                    echo '</table>';
+                } else {
+                    // No data found
+                    echo 'No data found.';
+                }
+
+                // Close the database connection
+                $db->close();
+                ?>
+            </div>
         </div>
 
         <section class="special" id="special">
-        <div class="main-text"> 
-            <h2 style="color:#fff">Top <span>Orders</span></h2>
-        </div>
-        <div class="card-row">
+            <div class="main-text"> 
+                <h2 style="color:#fff">Top <span>Orders</span></h2>
+            </div>
+            <div class="card-row">
 
-        <?php
+                <?php
                 // Connect to the database and retrieve menu items
                 $db = new mysqli("localhost", "root", "", "hotel");
                 $query = "SELECT * FROM orders";
                 $result = $db->query($query);
 
-              
-// Check if there are rows in the result
-if ($result->num_rows > 0) {
-    // Display the data in a table
-    echo '<table border="1">';
-    echo '<tr>
-            <th>Order ID</th>
-            <th>Item Code</th>
-            <th>Item Name</th>
-            <th>Order Method</th>
-            <th>Total Cost</th>
-        </tr>';
+                // Check if there are rows in the result
+                if ($result->num_rows > 0) {
+                    // Display the data in a table
+                    echo '<table border="1">';
+                    echo '<tr>
+                            <th>Order ID</th>
+                            <th>Item Code</th>
+                            <th>Item Name</th>
+                            <th>Order Method</th>
+                            <th>Total Cost</th>
+                            <th>Status</th>
+                            <th>Start Time</th>
+                            <th>End Time</th>
+                        </tr>';
 
-    while ($row = $result->fetch_assoc()) {
-        echo '<tr>';
-        echo '<td>' . $row['orderId'] . '</td>';
-        echo '<td>' . $row['itemCode'] . '</td>';
-        echo '<td>' . $row['itemName'] . '</td>';
-        echo '<td>' . $row['orderMethod'] . '</td>';
-        echo '<td>' . $row['totalCost'] . '</td>';
-        echo '</tr>';
-    }
+                    while ($row = $result->fetch_assoc()) {
+                        echo '<tr>';
+                        echo '<td>' . $row['orderId'] . '</td>';
+                        echo '<td>' . $row['itemCode'] . '</td>';
+                        echo '<td>' . $row['itemName'] . '</td>';
+                        echo '<td>' . $row['orderMethod'] . '</td>';
+                        echo '<td>' . $row['totalCost'] . '</td>';
+                        echo '<td>' . $row['status'] . '</td>';
+                        echo '<td>' . $row['startTime'] . '</td>';
+                        echo '<td>' . $row['endTime'] . '</td>';
+                        echo '</tr>';
+                    }
 
-    echo '</table>';
-} else {
-    // No data found
-    echo 'No data found.';
-}
+                    echo '</table>';
+                } else {
+                    // No data found
+                    echo 'No data found.';
+                }
 
-// Close the database connection
-$db->close();
-?>
-           
-        </div>
+                // Close the database connection
+                $db->close();
+                ?>
+            </div>
+        </section>
 
     </div>
 
