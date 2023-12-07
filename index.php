@@ -37,8 +37,8 @@
     <img src="images/kingmeal.png" width="140" height="100" >
     
         <ul class="navlist">
-        <li><a href="pages/chasier.php">r </a></li>
-        <li><a href="pages/dashboard.php">admin</a></li>
+        <li><a href="pages/chasier.php">Cashier</a></li>
+        <li><a href="pages/dashboard.php">Admin</a></li>
             <li><a href="#home" class="active">Home</a></li>
             <li><a href="#menu">Menu </a></li>
             <li><a href="pages/promo.php">Promotion & Discount</a></li>
