@@ -71,6 +71,7 @@
         <h1>King Meal<br>Family Restuarant</h1>
     </div>
     <a href="../index.php" style="margin-top: 10px;">Customer</a>
+    <a href="kitchen.php" style="margin-top: 10px;">Kitchen</a>
     <a href="../index.php#menu" style="margin-top: 20px;">Menu</a>
     <a href="profile.php" style="margin-top: 20px;">Profile</a>
     <a href="#" style="margin-top: 20px;">Help</a>
