@@ -45,16 +45,23 @@
             --h2-font: 3rem;
             --p-font: 1.1rem;
         }
+        
+        .search-bar {
+            position: absolute;
+            top: 15px;
+            right: 5px;
+        }
+    
     </style>
 </head>
 
 <body>
 
     <div class="topnav">
-        <h1 class="page-name">Dashboard</h1>
-        <div class="search-bar">
-            <input type="text" placeholder="Search...">
-        </div>
+        <h1 class="page-name">Admin Dashboard</h1>
+        <div class="search-bar" style="padding-right: 250px;">
+    <input type="text" placeholder="Search..." style="padding: 8px; width: 200px; box-sizing: border-box;">
+</div>
     </div>
 
     <div class="sidenav">
